@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex bg-dark flex-center">
+  <q-page class="flex bg-red-5 flex-center">
     <Timer/>
   </q-page>
 </template>

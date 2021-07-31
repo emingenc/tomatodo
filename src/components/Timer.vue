@@ -1,6 +1,6 @@
 <template>
   <div class="full-width text-center">
-    <div class="text-center text-grey-2 full-width bg-dark q-pa-md">
+    <div class="text-center text-grey-2 full-width  q-pa-md">
       Choose your time:
       <q-option-group v-model="timeChoose" :options="timeOptions" color="blue" dark inline />
     </div>
@@ -16,7 +16,7 @@
     >
       <span :class="`text-${timerColor}`">{{minutes}}:{{seconds}}</span>
     </q-circular-progress>
-    <div class="text-center q-mt-lg q-mb-lg full-width bg-dark q-pa-md">
+    <div class="text-center q-mt-lg q-mb-lg full-width  q-pa-md">
       <q-btn
         flat
         v-if="!pauseButton"
