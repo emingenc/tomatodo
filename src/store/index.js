@@ -1,27 +1,26 @@
-import { store } from 'quasar/wrappers'
-import { createStore } from 'vuex'
+import { reactive } from "vue";
 
-// import example from './module-example'
+const state = reactive({
 
-/*
- * If not building with SSR mode, you can
- * directly export the Store instantiation;
- *
- * The function below can be async too; either use
- * async/await or return a Promise which resolves
- * with the Store instance.
- */
-
-export default store(function (/* { ssrContext } */) {
-  const Store = createStore({
-    modules: {
-      // example
-    },
-
-    // enable strict mode (adds overhead!)
-    // for dev mode and --debug builds only
-    strict: process.env.DEBUGGING
-  })
-
-  return Store
+  todos:[],
+  text: '',
+  
 })
+
+const methods = {
+  addTask(todo){
+    state.todos.push(todo)
+    state.text = ''
+  },
+  deleteTask(todo){
+    state.todos = state.todos.filter(item => item != todo)
+  }
+}
+
+const getters = {}
+
+export default {
+  state,
+  methods,
+  getters,
+}
