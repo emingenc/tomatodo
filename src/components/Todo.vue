@@ -1,13 +1,13 @@
 <template>
-    <div class="q-pa-md row items-start q-gutter-md text-white ">
-    <q-card flat class="bg-red-4  flex flex-center" style="width:500px;">
+    <div class="q-pa-sm row items-start flex flex-center text-white ">
+    <q-card flat class="bg-red-4   " style="width:90% ; height:400px">
       
       <q-input rounded standout bottom-slots
        @keyup.enter ="store.methods.addTask(store.state.text)"
                  v-model="store.state.text"
                 label="Add task" 
-                style="width:90%;"
-                class="q-pt-lg">
+                style="width:100% ;"
+                class="q-pt-sm top ">
             <template v-slot:prepend>
             <q-icon name="task" />
             </template>
@@ -17,8 +17,8 @@
             </template>
         </q-input>
 
-        <q-list style="width:90%;">
-        <q-item tag="label" class="q-pa-md"  v-ripple
+        <q-list style="width:100%;" class="justify-around">
+        <q-item tag="label" class="q-pa-md "  v-ripple
         v-for="todo in store.state.todos" :key="todo">
             <q-item-section side top>
             <q-checkbox v-model="check1" />
