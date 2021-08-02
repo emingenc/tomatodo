@@ -54,13 +54,13 @@
 import BrowserNotifications from '../mixins/BrowserNotifications'
 export default {
   mixins: [BrowserNotifications],
+  props: ['timeChoose','total'],
   data () {
     return {
       timer: null,
-      timeChoose: 25,
       pauseButton: false,
       resetButton: false,
-      totalTime: 25 * 60,
+      totalTime: this.total * 60,
       timeOptions: [{ label: 'Pomodoro', value: 25 }, { label: 'Short Break', value: 5 }, { label: 'Long Break', value: 10 }]
     }
   },
