@@ -1,9 +1,9 @@
 <template>
   <div class="full-width text-center">
-    <div class="text-center text-grey-2 full-width  q-pa-md">
+    <!-- <div class="text-center text-grey-2 full-width  q-pa-md">
       Choose your time:
       <q-option-group v-model="timeChoose" :options="timeOptions" color="blue" dark inline />
-    </div>
+    </div> -->
     <q-circular-progress
       show-value
       class="text-white q-mb-none q-mt-lg"
