@@ -32,7 +32,7 @@
         :done="step > 2"
         :header-nav="step > 2"
       >     
-            <Timer :timeChoose="2"  :total="0.1"/>
+            <Timer :timeChoose="3"  :total="0.05"/>
 
         <q-stepper-navigation class="q-pa-md absolute-bottom">
           <q-btn color="red-10" @click="step = 3" label="Continue" />

@@ -66,7 +66,7 @@ export default {
   },
   computed: {
     initialTime () {
-      return this.timeChoose * 60
+      return this.total * 60
     },
     minutes () {
       const minutes = Math.floor(this.totalTime / 60)
@@ -109,7 +109,7 @@ export default {
       this.resetButton = true
     },
     resetTimer () {
-      this.totalTime = (this.timeChoose * 60)
+      this.totalTime = (this.total * 60)
       clearInterval(this.timer)
       this.timer = null
       this.resetButton = false
