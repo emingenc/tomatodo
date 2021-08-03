@@ -6,10 +6,10 @@
     </div> -->
     <q-circular-progress
       show-value
-      class="text-white q-mb-none q-mt-lg"
+      class="text-white q-ma-sm "
       :max="initialTime"
       :value="totalTime"
-      size="230px"
+      size="300px"
       :thickness="0.13"
       :color="timerColor"
       track-color="dark"
@@ -51,12 +51,17 @@
   </div>
 </template>
 <script>
+import {inject} from 'vue'
 import BrowserNotifications from '../mixins/BrowserNotifications'
 export default {
   mixins: [BrowserNotifications],
   props: ['total'],
+
   data () {
+    const store = inject('store')
+
     return {
+      store,
       timer: null,
       pauseButton: false,
       resetButton: false,
@@ -85,7 +90,8 @@ export default {
     
     totalTime () {
       if (this.totalTime === 0) {
-        this.showNotification('Time is up!', '', 'statics/app-logo-128x128.png')
+        this.store.state.step = 3
+        this.showNotification('Time is up!', 'Test', require('assets/button.png'))
       }
     }
   },

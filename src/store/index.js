@@ -6,10 +6,7 @@ const state = reactive({
   text: '',
   step: 1,
   timeChoose: 25 ,
-  done1: false,
-  done2: false,
-  done3: false,
-  done4: false,
+  isFinished:false,
   
 })
 
