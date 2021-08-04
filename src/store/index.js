@@ -12,8 +12,10 @@ const state = reactive({
 
 const methods = {
   addTask(todo){
+    if (state.todo.length <= 3){
     todo ? state.todos.push(todo) : ''
     state.text = ''
+  }
   },
   deleteTask(todo){
     state.todos = state.todos.filter(item => item != todo)
