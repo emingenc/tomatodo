@@ -15,27 +15,42 @@
       :color="timerColor"
       track-color="dark"
     >
-      <p v-if="!pauseButton" :class="`row text-${timerColor}`" style="font-size: 15px;">Tap to start</p>
-      <p v-if="pauseButton" :class="`row text-${timerColor}`" style="font-size: 15px;">Tap to pause</p>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
-      <span :class="`text-${timerColor}`">{{minutes}}:{{seconds}}</span>
+      <div class="fit column wrap  ">
+        
+          <p
+            v-if="!pauseButton"
+            :class="` text-${timerColor}`"
+            style="font-size: 15px"
+          >
+            Tap to start
+          </p>
+          <p
+            v-if="pauseButton"
+            :class="` text-${timerColor}`"
+            style="font-size: 15px"
+          >
+            Tap to pause
+          </p>
+
+        
+        <span :class="`row text-${timerColor}`" >
+            {{ minutes }}:{{ seconds }}
+            </span>
+          
+        
+      </div>
     </q-circular-progress>
-   
   </div>
 </template>
 <script>
-import {inject} from 'vue'
-import BrowserNotifications from '../mixins/BrowserNotifications'
+import { inject } from "vue";
+import BrowserNotifications from "../mixins/BrowserNotifications";
 export default {
   mixins: [BrowserNotifications],
-  props: ['total'],
+  props: ["total"],
 
-  data () {
-    const store = inject('store')
+  data() {
+    const store = inject("store");
 
     return {
       store,
@@ -43,78 +58,86 @@ export default {
       pauseButton: false,
       resetButton: false,
       totalTime: this.total * 60,
-      timeOptions: [{ label: 'Pomodoro', value: 25 }, { label: 'Short Break', value: 5 }, { label: 'Long Break', value: 10 }]
-    }
+      timeOptions: [
+        { label: "Pomodoro", value: 25 },
+        { label: "Short Break", value: 5 },
+        { label: "Long Break", value: 10 },
+      ],
+    };
   },
   computed: {
-    initialTime () {
-      return this.total * 60
+    initialTime() {
+      return this.total * 60;
     },
-    minutes () {
-      const minutes = Math.floor(this.totalTime / 60)
-      return this.padTime(minutes)
+    minutes() {
+      const minutes = Math.floor(this.totalTime / 60);
+      return this.padTime(minutes);
     },
-    seconds () {
-      const seconds = this.totalTime - (this.minutes * 60)
-      return this.padTime(seconds)
+    seconds() {
+      const seconds = this.totalTime - this.minutes * 60;
+      return this.padTime(seconds);
     },
-    timerColor () {
-      const value = this.totalTime / 60
-      return value <= 3 ? 'red-6' : value <= 10 ? 'orange-6' : 'white'
-    }
+    timerColor() {
+      const value = this.totalTime / 60;
+      return value <= 3 ? "red-6" : value <= 10 ? "orange-6" : "white";
+    },
   },
   watch: {
-    
-    totalTime () {
+    totalTime() {
       if (this.totalTime === 0) {
-        this.store.state.step = 3
-        this.showNotification('Time is up!', 'Test', require('assets/button.png'))
+        this.store.state.step = 3;
+        this.showNotification(
+          "Time is up!",
+          "Test",
+          require("assets/button.png")
+        );
       }
-    }
+    },
   },
-  meta () {
+  meta() {
     return {
-      title: this.timer ? `(${this.minutes}:${this.seconds}) Pomodoro Timer` : 'Pomodoro Timer'
-    }
+      title: this.timer
+        ? `(${this.minutes}:${this.seconds}) Pomodoro Timer`
+        : "Pomodoro Timer",
+    };
   },
   methods: {
-    
-    startTimer () {
-      this.timer = setInterval(() => this.countdown(), 1000)
-      this.resetButton = true
-      this.pauseButton = true
+    startTimer() {
+      this.timer = setInterval(() => this.countdown(), 1000);
+      this.resetButton = true;
+      this.pauseButton = true;
     },
-    pauseTimer () {
-      this.pauseButton = false
-      clearInterval(this.timer)
-      this.timer = null
-      this.resetButton = true
+    pauseTimer() {
+      this.pauseButton = false;
+      clearInterval(this.timer);
+      this.timer = null;
+      this.resetButton = true;
     },
-    resetTimer () {
-      this.totalTime = (this.total * 60)
-      clearInterval(this.timer)
-      this.timer = null
-      this.resetButton = false
-      this.pauseButton = false
+    resetTimer() {
+      this.totalTime = this.total * 60;
+      clearInterval(this.timer);
+      this.timer = null;
+      this.resetButton = false;
+      this.pauseButton = false;
     },
-    padTime (time) {
-      return (time < 10 ? '0' : '') + time
+    padTime(time) {
+      return (time < 10 ? "0" : "") + time;
     },
-    countdown () {
+    countdown() {
       if (this.totalTime >= 1) {
-        this.totalTime--
+        this.totalTime--;
       } else {
-        this.totalTime = 0
-        this.resetTimer()
+        this.totalTime = 0;
+        this.resetTimer();
       }
     },
-    tapTimer(){
+    tapTimer() {
       if (!this.pauseButton) {
-        this.startTimer()
+        this.startTimer();
       } else {
-        this.pauseTimer()
+        this.pauseTimer();
       }
     },
-  }
-}
+  },
+};
 </script>
