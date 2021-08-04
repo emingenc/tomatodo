@@ -12,7 +12,7 @@ const state = reactive({
 
 const methods = {
   addTask(todo){
-    if (state.todo.length <= 3){
+    if (state.todos.length < 1){
     todo ? state.todos.push(todo) : ''
     state.text = ''
   }

@@ -2,7 +2,7 @@
     <div class="q-pa-sm row items-start flex flex-center text-white ">
     <q-card flat class="bg-red-4   " style="width:90% ; ">
       
-      <q-input rounded standout bottom-slots
+      <q-input v-if="store.state.todos.length < 1" rounded standout bottom-slots
        @keyup.enter ="store.methods.addTask(store.state.text)"
                  v-model="store.state.text"
                 label="Add task" 
@@ -29,7 +29,7 @@ import {inject} from 'vue'
 export default {
     name:'Todo',
     setup(){
-        const store = inject('store')
+        const store = inject('store')   
 
 
         return {

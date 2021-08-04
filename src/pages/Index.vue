@@ -36,7 +36,7 @@
         :header-nav="store.state.step > 1"
       >
            <Todo/>
-        <q-stepper-navigation class="q-pa-md absolute-bottom">
+        <q-stepper-navigation v-if="store.state.todos.length == 1" class="q-pa-md center">
           <q-btn @click=" store.state.step = 2 " color="red-10" label="Continue" />
         </q-stepper-navigation>
       </q-step>
