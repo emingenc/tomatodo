@@ -7,7 +7,7 @@
     <q-circular-progress
       @click="tapTimer"
       show-value
-      class="text-white q-ma-sm "
+      class="text-white q-ma-sm text-center"
       :max="initialTime"
       :value="totalTime"
       size="300px"
@@ -15,6 +15,13 @@
       :color="timerColor"
       track-color="dark"
     >
+      <p v-if="!pauseButton" :class="`row text-${timerColor}`" style="font-size: 15px;">Tap to start</p>
+      <p v-if="pauseButton" :class="`row text-${timerColor}`" style="font-size: 15px;">Tap to pause</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
       <span :class="`text-${timerColor}`">{{minutes}}:{{seconds}}</span>
     </q-circular-progress>
    
