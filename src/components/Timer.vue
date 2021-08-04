@@ -5,6 +5,7 @@
       <q-option-group v-model="timeChoose" :options="timeOptions" color="blue" dark inline />
     </div> -->
     <q-circular-progress
+      @click="tapTimer"
       show-value
       class="text-white q-ma-sm "
       :max="initialTime"
@@ -16,38 +17,7 @@
     >
       <span :class="`text-${timerColor}`">{{minutes}}:{{seconds}}</span>
     </q-circular-progress>
-    <div class="text-center q-mt-lg q-mb-lg full-width  q-pa-md">
-      <q-btn
-        flat
-        v-if="!pauseButton"
-        size="15px"
-        color="white"
-        label="Start"
-        stack
-        icon="play_arrow"
-        @click="startTimer"
-      ></q-btn>
-      <q-btn
-        flat
-        size="15px"
-        color="white"
-        label="Pause"
-        @click="pauseTimer"
-        v-if="pauseButton"
-        stack
-        icon="pause"
-      ></q-btn>
-      <q-btn
-        v-show="resetButton"
-        flat
-        size="15px"
-        color="white"
-        label="Reset"
-        @click="resetTimer"
-        stack
-        icon="restore"
-      ></q-btn>
-    </div>
+   
   </div>
 </template>
 <script>
@@ -101,6 +71,7 @@ export default {
     }
   },
   methods: {
+    
     startTimer () {
       this.timer = setInterval(() => this.countdown(), 1000)
       this.resetButton = true
@@ -129,7 +100,14 @@ export default {
         this.totalTime = 0
         this.resetTimer()
       }
-    }
+    },
+    tapTimer(){
+      if (!this.pauseButton) {
+        this.startTimer()
+      } else {
+        this.pauseTimer()
+      }
+    },
   }
 }
 </script>

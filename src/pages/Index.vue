@@ -5,7 +5,7 @@
         <q-item tag="label" class="q-pa-md "  v-ripple
         v-for="todo in store.state.todos" :key="todo">
             <q-item-section side top>
-            <q-checkbox  @click="store.methods.deleteTask(todo)"/>
+            <q-checkbox false @click="store.methods.deleteTask(todo)"/>
             </q-item-section>
 
             <q-item-section>
@@ -52,7 +52,7 @@
       >     
             <Timer :total="0.1"/>
 
-        <q-stepper-navigation class="q-pa-md absolute-bottom">
+        <q-stepper-navigation class="q-pa-md center">
           <q-btn color="red-10" @click="store.state.step = 3" label="Continue" />
           <q-btn flat @click="store.state.step = 1" color="red-10" label="Back" class="q-ml-sm" />
         </q-stepper-navigation>
