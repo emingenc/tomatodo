@@ -49,7 +49,7 @@
           :done="store.state.step > 2"
           :header-nav="store.state.step > 2"
         >
-          <Timer :total="0.1/6" />
+          <Timer :total="0.1 / 6" />
         </q-step>
 
         <q-step
@@ -60,10 +60,8 @@
           :header-nav="store.state.step > 3"
         >
           <Wheel />
-       
-          
         </q-step>
-         <q-step
+        <q-step
           :name="4"
           inactive-color="blue-3"
           title="Rest 5 minutes"
@@ -72,6 +70,9 @@
           :done="store.state.step > 2"
           :header-nav="store.state.step > 2"
         >
+          <div class="text-red-500 q-gutter-xs">
+            <p>{{ store.state.reward.value }}</p>
+          </div>
           <Timer :total="5" />
         </q-step>
       </q-stepper>

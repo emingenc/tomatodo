@@ -12,15 +12,17 @@
 </template>
 
 <script >
-import { defineComponent } from "vue";
+import { defineComponent, inject } from "vue";
 import { Wheel } from "vue3-fortune-wheel";
 export default defineComponent({
   name: "App",
   components: {
     Wheel,
   },
-  data() {
+  setup() {
+    const store = inject("store");
     return {
+      store,
       gift: 5,
       data: [
         {
@@ -71,7 +73,9 @@ export default defineComponent({
   },
   methods: {
     done(r) {
-      console.log(r);
+      this.store.state.reward = r
+
+       setTimeout(()=>{this.store.state.step = 4}, 1200);
     },
   },
 });

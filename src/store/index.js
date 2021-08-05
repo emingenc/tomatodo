@@ -7,7 +7,7 @@ const state = reactive({
   step: 1,
   timeChoose: 25 ,
   isFinished:false,
-  gift:null,
+  reward:null,
   
 })
 
