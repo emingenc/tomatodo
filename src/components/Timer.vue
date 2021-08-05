@@ -85,12 +85,12 @@ export default {
   watch: {
     totalTime() {
       if (this.totalTime === 0) {
-        this.store.state.step = 3;
         this.showNotification(
           "Time is up!",
           "Test",
           require("assets/button.png")
         );
+        setTimeout(()=>{this.store.state.step = 3}, 500);
       }
     },
   },

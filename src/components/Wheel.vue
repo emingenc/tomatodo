@@ -6,7 +6,7 @@
       :data="data"
       @done="done"
       :imgParams="logo"
-      style="width:%100 ; height:60 ;"
+      style="width:%10 ; height:%50 ;  font-size: 45px"
     />
   </div>
 </template>
@@ -28,6 +28,8 @@ export default defineComponent({
           value: "Gift 1",
           bgColor: "#7d7db3",
           color: "#ffffff",
+          width: 150,
+        height: 150,
         },
         {
           id: 2,
@@ -62,8 +64,8 @@ export default defineComponent({
       ],
       logo: {
         src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Vue.js_Logo_2.svg/2367px-Vue.js_Logo_2.svg.png",
-        width: 100,
-        height: 30,
+        width: 150,
+        height: 150,
       },
     };
   },

@@ -7,6 +7,7 @@ const state = reactive({
   step: 1,
   timeChoose: 25 ,
   isFinished:false,
+  gift:null,
   
 })
 
@@ -15,6 +16,7 @@ const methods = {
     if (state.todos.length < 1){
     todo ? state.todos.push(todo) : ''
     state.text = ''
+    state.step = 2
   }
   },
   deleteTask(todo){
