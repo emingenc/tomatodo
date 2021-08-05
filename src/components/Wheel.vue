@@ -6,7 +6,7 @@
       :data="data"
       @done="done"
       :imgParams="logo"
-      style="width:%10 ; height:%50 ;  font-size: 45px"
+      style="width:%10 ; height:%50 ;  font-size: 65px"
     />
   </div>
 </template>
@@ -23,7 +23,7 @@ export default defineComponent({
     const store = inject("store");
     return {
       store,
-      gift: 5,
+      gift: Math.floor(Math.random() * 6) + 1,
       data: [
         {
           id: 1,

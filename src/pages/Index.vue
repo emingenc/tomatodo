@@ -49,8 +49,8 @@
           :done="store.state.step > 2"
           :header-nav="store.state.step > 2"
         > 
-          <Timer :total="25" />
-          <!-- <Timer :total="0.1 / 6" /> -->
+          <!-- <Timer :total="25" /> -->
+          <Timer :total="0.1 / 6" />
         </q-step>
 
         <q-step
@@ -74,8 +74,8 @@
           <div class="text-red-500 q-gutter-xs">
             <p>{{ store.state.reward.value }}</p>
           </div>
-          <Timer :total="5" />
-          <!-- <Timer :total="0.1 / 6" /> -->
+          <!-- <Timer :total="5" /> -->
+          <Timer :total="0.1 / 6" />
         </q-step>
       </q-stepper>
     </div>
