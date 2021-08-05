@@ -6,7 +6,7 @@
       :data="data"
       @done="done"
       :imgParams="logo"
-      style="width:%10 ; height:%50 ;  font-size: 65px"
+      style="w ; height:%50 ;  font-size: 65px"
     />
   </div>
 </template>
@@ -27,11 +27,10 @@ export default defineComponent({
       data: [
         {
           id: 1,
-          value: "Gift 1",
-          bgColor: "#7d7db3",
+          value: "Social media",
+          bgColor: "#4267B2",
           color: "#ffffff",
-          width: 150,
-        height: 150,
+      
         },
         {
           id: 2,
