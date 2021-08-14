@@ -2,7 +2,7 @@
   <q-page class="flex bg-red-2 flex-center">
     <div
     @dblclick="this.store.state.step ++" class="q-pa-md">
-      <q-list style="width: 750px" class="justify-around">
+      <q-list style="width: 600px" class="justify-around">
         <q-item
          
           tag="label"
