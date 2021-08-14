@@ -1,7 +1,7 @@
 <template>
-  <q-page class="flex bg-red-3 flex-center">
-    <div @click="this.store.state.step ++" class="q-pa-md">
-      <q-list style="width: 100%" class="justify-around">
+  <q-page @dblclick="this.store.state.step --" class="flex bg-red-3 flex-center">
+    <div @dblclick="this.store.state.step ++" class="q-pa-md">
+      <q-list style="width: 750px" class="justify-around">
         <q-item
          
           tag="label"
