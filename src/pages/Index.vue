@@ -1,8 +1,10 @@
 <template>
-  <q-page class="flex bg-red-3 flex-center">
-    <div class="q-pa-md">
-      <q-list style="width: 100%" class="justify-around">
+  <q-page class="flex bg-red-2 flex-center">
+    <div
+    @dblclick="this.store.state.step ++" class="q-pa-md">
+      <q-list style="width: 750px" class="justify-around">
         <q-item
+         
           tag="label"
           class="q-pa-md"
           v-ripple
@@ -28,7 +30,7 @@
         animated
         inactive-color="red-2"
         active-color="red-10"
-        class="bg-red-4"
+        class="bg-red-3"
       >
         <q-step
           :name="1"
@@ -50,7 +52,7 @@
           :header-nav="store.state.step > 2"
         > 
           <!-- <Timer :total="25" /> -->
-          <Timer :total="0.1 / 6" />
+          <Timer :total="25 " :step="3"/>
         </q-step>
 
         <q-step
@@ -71,11 +73,11 @@
           :done="store.state.step > 2"
           :header-nav="store.state.step > 2"
         >
-          <div class="text-red-500 q-gutter-xs">
-            <p>{{ store.state.reward.value }}</p>
+          <div class="text-center text-red-10  q-gutter-xs">
+            <h5><strong style="width:%100; ">{{ store.state.reward.value }}</strong></h5>
           </div>
           <!-- <Timer :total="5" /> -->
-          <Timer :total="0.1 / 6" />
+          <Timer :total="5 " :step="1" />
         </q-step>
       </q-stepper>
     </div>

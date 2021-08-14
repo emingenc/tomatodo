@@ -47,7 +47,7 @@ import { inject } from "vue";
 import BrowserNotifications from "../mixins/BrowserNotifications";
 export default {
   mixins: [BrowserNotifications],
-  props: ["total"],
+  props: ["total","step"],
 
   data() {
     const store = inject("store");
@@ -90,7 +90,7 @@ export default {
           "Test",
           require("assets/button.png")
         );
-        setTimeout(()=>{this.store.state.step = 3}, 500);
+        setTimeout(()=>{this.store.state.step = this.step}, 500);
       }
     },
   },

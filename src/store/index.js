@@ -21,6 +21,7 @@ const methods = {
   },
   deleteTask(todo){
     state.todos = state.todos.filter(item => item != todo)
+    state.step = 1
   }
 }
 
