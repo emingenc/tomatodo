@@ -1,8 +1,9 @@
 <template>
   <q-page class="flex bg-red-3 flex-center">
-    <div class="q-pa-md">
+    <div @click="this.store.state.step ++" class="q-pa-md">
       <q-list style="width: 100%" class="justify-around">
         <q-item
+         
           tag="label"
           class="q-pa-md"
           v-ripple
