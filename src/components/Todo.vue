@@ -1,6 +1,6 @@
 <template>
     <div class="q-pa-sm row items-start flex flex-center text-white ">
-    <q-card flat class="bg-red-4   " style="width:90% ; ">
+    <q-card flat class="bg-red-3   " style="width:90% ; ">
       
       <q-input v-if="store.state.todos.length < 1" rounded standout bottom-slots
        @keyup.enter ="store.methods.addTask(store.state.text)"
