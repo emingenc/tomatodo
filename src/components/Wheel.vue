@@ -6,7 +6,7 @@
       :data="data"
       @done="done"
       :imgParams="logo"
-      style="w ; height:%50 ;  font-size: 65px"
+      style="width:400px ; height:%50 ;  font-size: 65px"
     />
   </div>
 </template>
@@ -65,8 +65,8 @@ export default defineComponent({
       ],
       logo: {
         src: "https://media3.giphy.com/media/XfGxvPXC4SYUvw5iAh/giphy.gif?cid=790b7611c73c7280332db7e8915af68b0bace9b780452c15&rid=giphy.gif&ct=g",
-        width: 120,
-        height: 120,
+        width: 100,
+        height: 100,
       },
     };
   },
