@@ -65,8 +65,8 @@ export default defineComponent({
       ],
       logo: {
         src: "https://media3.giphy.com/media/XfGxvPXC4SYUvw5iAh/giphy.gif?cid=790b7611c73c7280332db7e8915af68b0bace9b780452c15&rid=giphy.gif&ct=g",
-        width: 150,
-        height: 170,
+        width: 120,
+        height: 120,
       },
     };
   },
