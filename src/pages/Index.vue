@@ -1,5 +1,5 @@
 <template>
-  <q-page class="flex bg-red-2 flex-center">
+  <q-page class="flex bg-red-2 flex-center full-height">
     <div
     @dblclick="this.store.state.step ++" class="q-pa-md">
       <q-list style="width: 400px" class="justify-around">

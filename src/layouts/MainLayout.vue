@@ -1,7 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-toolbar class="bg-primary text-white">
-      <q-btn flat round dense icon="assignment_ind" />
+    <q-toolbar class="bg-primary gt-xs text-white">
       <q-toolbar-title>
         Toolbar
       </q-toolbar-title>
