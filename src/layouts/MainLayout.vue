@@ -2,7 +2,7 @@
   <q-layout view="lHh Lpr lFf">
     <q-toolbar :class="'bg-'+store.state.primary+ ' gt-xs text-white'">
       <q-toolbar-title>
-        Toolbar
+        Pomodoro Wheel
       </q-toolbar-title>
       
     <bottom-nav
@@ -38,7 +38,7 @@ export default defineComponent({
     const store = inject("store");
       let menu =  [
                         {
-                          title: 'instructions',
+                          title: 'How to',
                           caption: "",
                           icon: "book",
                           link: "../../dashboard",
