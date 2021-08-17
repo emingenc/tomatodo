@@ -2,6 +2,8 @@
 
 Pomodoro task application that rewards user with luck wheel
 
+[DEMO](https://emingenc.github.io/pomodoro_wheel)
+
 ## Install the dependencies
 ```bash
 yarn
