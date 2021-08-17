@@ -6,7 +6,7 @@
       :data="data"
       @done="done"
       :imgParams="logo"
-      class='fit'
+      class='fitthis.store.state.reward1'
       style="height:%40 ;  font-size: 65px"
     />
   </div>
@@ -28,38 +28,38 @@ export default defineComponent({
       data: [
         {
           id: 1,
-          value: "Social media",
+          value: store.state.reward1,
           bgColor: "#4267B2",
           color: "#ffffff",
       
         },
         {
           id: 2,
-          value: "Drink(Tea coffe etc)",
+          value: store.state.reward2,
           bgColor: "#ffffff",
           color: "#000000",
         },
         {
           id: 3,
-          value: "short game(mobile/pc)",
+          value: store.state.reward3,
           bgColor: "#c92729",
           color: "#ffffff",
         },
         {
           id: 4,
-          value: "Short YouTube video",
+          value: store.state.reward4,
           bgColor: "#7d7db3",
           color: "#ffffff",
         },
         {
           id: 5,
-          value: "Meditate",
+          value: store.state.reward5,
           bgColor: "#ffffff",
           color: "#000000",
         },
         {
           id: 6,
-          value: "Favorite music",
+          value: store.state.reward6,
           bgColor: "#c92729",
           color: "#ffffff",
         },
