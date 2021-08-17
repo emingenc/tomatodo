@@ -1,8 +1,10 @@
 <template>
-  <q-page class="flex bg-red-2 flex-center full-height">
+  <q-page :class=" 'bg-'+store.state.primary+  ' flex flex-center' ">
     <div
-    @dblclick="this.store.state.step ++" class="q-pa-md">
-      <q-list style="width: 400px" class="justify-around">
+    @dblclick="this.store.state.step ++"  
+    :class="this.$q.screen.xs ? ('fit q-pa-sm' ) : 'q-pa-xl' "
+    :style="this.$q.screen.xs ? ('' ) : 'width: 600px' ">
+      <q-list  class="justify-around">
         <q-item
          
           tag="label"
