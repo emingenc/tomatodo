@@ -8,8 +8,8 @@ const state = reactive({
   timeChoose: 25 ,
   isFinished:false,
   reward:null,
-  primary:'red-3',
-  secondary:'red-7',
+  primary:'blue-3',
+  secondary:'blue-7',
 
   reward1:"Social media",
   reward2:"Drink(Tea coffe etc)",

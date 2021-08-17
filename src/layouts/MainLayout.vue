@@ -41,7 +41,7 @@ export default defineComponent({
                           title: 'How to',
                           caption: "",
                           icon: "book",
-                          link: "../../dashboard",
+                          link: "../../howto",
                         },
                         {
                           title: 'home',
