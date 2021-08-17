@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-toolbar class="bg-primary gt-xs text-white">
+    <q-toolbar :class="'bg-'+store.state.primary+ ' gt-xs text-white'">
       <q-toolbar-title>
         Toolbar
       </q-toolbar-title>
@@ -15,7 +15,7 @@
     <q-page-container>
       <router-view />
     </q-page-container>
-    <q-footer reveal elevated class="flex flex-center bg-primary text-white xs">
+    <q-footer reveal elevated :class="'flex flex-center text-white xs '+'bg-'+store.state.primary">
       <bottom-nav
         v-for="link in menu"
         :key="link.title"
@@ -29,13 +29,13 @@
 <script>
 import BottomNav from "src/components/BottomNav.vue";
 
-import { defineComponent, ref } from 'vue'
+import { defineComponent, inject } from 'vue'
 
 export default defineComponent({
   name: 'MainLayout',
   components: {BottomNav},
   setup () {
-   
+    const store = inject("store");
       let menu =  [
                         {
                           title: 'instructions',
@@ -59,6 +59,7 @@ export default defineComponent({
 
 
     return {
+      store,
       menu,
       toggleLeftDrawer () {
         leftDrawerOpen.value = !leftDrawerOpen.value

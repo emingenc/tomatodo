@@ -8,8 +8,8 @@ const state = reactive({
   timeChoose: 25 ,
   isFinished:false,
   reward:null,
-  primary:'#e27365',
-  secondary:'#d83019'
+  primary:'red-3',
+  secondary:'red-7'
   
 })
 

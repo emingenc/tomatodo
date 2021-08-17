@@ -79,7 +79,7 @@ export default {
     },
     timerColor() {
       const value = this.totalTime / 60;
-      return value <= 3 ? "red-6" : value <= 10 ? "orange-6" : "white";
+      return value <= 3 ? "red-8" : value <= 10 ? "red-6" : "white";
     },
   },
   watch: {

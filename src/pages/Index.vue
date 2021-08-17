@@ -28,9 +28,9 @@
         vertical
         ref="stepper"
         animated
-        inactive-color="red-2"
-        active-color="red-10"
-        class="bg-red-3"
+        :inactive-color="'red-1'"
+        :active-color="store.state.secondary"
+        :class="'bg-'+store.state.primary"
       >
         <q-step
           :name="1"
