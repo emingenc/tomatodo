@@ -4,6 +4,14 @@ Pomodoro task application that rewards user with luck wheel
 
 [DEMO](https://emingenc.github.io/pomodoro_wheel)
 
+<a href='https://emingenc.github.io/pomodoro_wheel' align="center">
+  <img src="./images/img1.png" width="300" title="how tot">
+  <img src="./images/img2.png" width="300" alt="">
+  <img src="./images/img3.png" width="300" alt="">
+  <img src="./images/img4.png" width="300" alt="">
+  <img src="./images/img5.png" width="300" alt="">
+</a>
+
 ## Install the dependencies
 ```bash
 yarn
