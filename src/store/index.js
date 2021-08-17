@@ -9,7 +9,14 @@ const state = reactive({
   isFinished:false,
   reward:null,
   primary:'red-3',
-  secondary:'red-7'
+  secondary:'red-7',
+
+  reward1:"Social media",
+  reward2:"Drink(Tea coffe etc)",
+  reward3:"short game(mobile/pc)",
+  reward4:"Short YouTube video",
+  reward5:"Meditate",
+  reward6:"Favorite music",
   
 })
 
