@@ -6,7 +6,8 @@
       :data="data"
       @done="done"
       :imgParams="logo"
-      style="width:400px ; height:%50 ;  font-size: 65px"
+      class='fit'
+      style="height:%40 ;  font-size: 65px"
     />
   </div>
 </template>

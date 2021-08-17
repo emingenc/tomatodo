@@ -12,7 +12,7 @@
           class=" gt-xs"
         />
     </q-toolbar>
-    <q-page-container>
+    <q-page-container :class="'bg-'+store.state.primary">
       <router-view />
     </q-page-container>
     <q-footer reveal elevated :class="'flex flex-center text-white xs '+'bg-'+store.state.primary">
@@ -47,7 +47,7 @@ export default defineComponent({
                           title: 'home',
                           caption: "",
                           icon: "home",
-                          link: "../",
+                          link: "../home",
                         },
                         {
                           title: 'settings',
