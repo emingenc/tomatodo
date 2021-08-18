@@ -17,15 +17,15 @@
         <q-tab-panels
           v-model="tab"
           animated
-          :class="this.$q.screen.xs ? ('fit q-pa-sm' + ' bg-' + store.state.primary) : ('q-pa-xl' +' bg-' + store.state.primary) "
-          :style="this.$q.screen.xs ? ('' ) : 'width: 600px' ">
+          :class="this.$q.screen.xs ? ('q-pa-sm' + ' bg-' + store.state.primary) : (' q-pa-xl' +' bg-' + store.state.primary) "
+          :style="this.$q.screen.xs ? ('' ) : 'width: 600px; ' ">
         >
           <q-tab-panel name="appearance">
-            <div class="text-h6">Appearance</div>
+            <div class="text-h6 ">Appearance</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </q-tab-panel>
 
-          <q-tab-panel name="rewards" :class="'bg-' + store.state.primary">
+          <q-tab-panel name="rewards" >
             <div class="text-h6">Rewards</div>
             <q-input
               clearable
@@ -77,7 +77,7 @@
             />
           </q-tab-panel>
 
-          <q-tab-panel name="times" :class="'bg-' + store.state.primary">
+          <q-tab-panel name="times" >
             <div class="text-h6">Time</div>
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
           </q-tab-panel>
