@@ -1,9 +1,9 @@
 <template>
-  <q-page :class=" 'bg-'+store.state.primary+  ' flex flex-center' ">
+  <q-page :class=" 'bg-'+store.state.primary ">
     <div
     @dblclick="this.store.state.step ++"  
-    :class="this.$q.screen.xs ? ('fit q-pa-sm' ) : 'q-pa-xl' "
-    :style="this.$q.screen.xs ? ('' ) : 'width: 600px' ">
+    :class="this.$q.screen.xs ? ('fit q-pa-lg' ) : 'q-pa-xl' "
+    :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:70% ' ">
       <q-list  class="justify-around">
         <q-item
          
