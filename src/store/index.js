@@ -9,7 +9,7 @@ const state = reactive({
   isFinished:false,
   reward:null,
   primary:'blue-3',
-  secondary:'blue-7',
+  secondary:'blue-8',
 
   reward1:"Social media",
   reward2:"Drink(Tea coffe etc)",
@@ -27,6 +27,10 @@ const methods = {
     state.text = ''
     state.step = 2
   }
+  },
+  setColor(color){
+    state.primary = `${color}-3`
+    state.secondary = `${color}-8`
   },
   deleteTask(todo){
     state.todos = state.todos.filter(item => item != todo)

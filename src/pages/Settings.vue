@@ -19,9 +19,19 @@
           :class="this.$q.screen.xs ? ('q-pa-sm' + ' bg-' + store.state.primary) : (' q-pa-xl' +' bg-' + store.state.primary) "
           :style="this.$q.screen.xs ? ('' ) : 'width: 100% ; ' ">
         >
-          <q-tab-panel name="appearance">
+          <q-tab-panel name="appearance" class="q-pa-md">
             <div class="text-h6 ">Appearance</div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Choose color
+            <div class="q-pa-md q-gutter-md"> 
+            <q-btn ripple color="red"        @click="store.methods.setColor( 'red')" />
+            <q-btn ripple color="indigo"  @click="store.methods.setColor( 'indigo')" />
+            <q-btn ripple color="blue"  @click="store.methods.setColor( 'blue')" />
+            <q-btn ripple color="green"  @click="store.methods.setColor( 'green')" />
+            <q-btn ripple color="purple"  @click="store.methods.setColor( 'purple')" />
+            <q-btn ripple color="brown"  @click="store.methods.setColor( 'brown')" />
+            <q-btn ripple color="teal" @click="store.methods.setColor( 'teal')" />
+            <q-btn ripple color="orange" @click="store.methods.setColor( 'orange')" />
+            </div>
           </q-tab-panel>
 
           <q-tab-panel name="rewards" >
