@@ -54,7 +54,7 @@
           :header-nav="store.state.step > 2"
         > 
           <!-- <Timer :total="25" /> -->
-          <Timer :total="25 " :step="3"/>
+          <Timer :total="store.state.focus " :step="3"/>
         </q-step>
 
         <q-step
@@ -74,12 +74,17 @@
           icon="settings"
           :done="store.state.step > 2"
           :header-nav="store.state.step > 2"
+          class=" q-gutter-md "
         >
           <div class="text-center text-red-10  q-gutter-xs">
             <h5><strong style="width:%100; ">{{ store.state.reward.value }}</strong></h5>
-          </div>
           <!-- <Timer :total="5" /> -->
-          <Timer :total="5 " :step="1" />
+          <q-btn flat dense rounded :color="store.state.secondary" 
+          class="q-pa-md"
+          label="long - short" @click="store.state.isLong = !store.state.isLong" />
+          </div>
+          <Timer v-if="store.state.isLong" :total="store.state.long" :step="1" />
+          <Timer v-if="!store.state.isLong" :total="store.state.short" :step="1" />
         </q-step>
       </q-stepper>
     </div>

@@ -11,6 +11,11 @@ const state = reactive({
   primary:'blue-3',
   secondary:'blue-8',
 
+  focus:25,
+  short:5,
+  long:15,
+  isLong:false,
+
   reward1:"Social media",
   reward2:"Drink(Tea coffe etc)",
   reward3:"short game(mobile/pc)",
