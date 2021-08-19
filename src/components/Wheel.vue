@@ -73,9 +73,9 @@ export default defineComponent({
   },
   methods: {
     done(r) {
-      this.store.state.reward = r
+      this.store.state.reward = r ;
+      this.store.state.step = 4
 
-       setTimeout(()=>{this.store.state.step = 4}, 1200);
     },
   },
 });
