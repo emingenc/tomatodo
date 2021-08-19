@@ -10,7 +10,7 @@
       class="text-white q-ma-sm text-center"
       :max="initialTime"
       :value="totalTime"
-      size="300px"
+      size="221px"
       :thickness="0.13"
       :color="timerColor"
       track-color="dark"
