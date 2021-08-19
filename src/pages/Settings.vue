@@ -89,11 +89,11 @@
           <q-tab-panel name="times" >
             <div class="q-gutter-y-md ">
 
-                <p>focus</p>
+                <p>focus: {{store.state.focus}} min</p>
             <q-slider  v-model="store.state.focus" :min="15" :max="40" color="green"/>
-                <p>short break</p>
+                <p>short break: {{store.state.short}} min </p>
             <q-slider v-model="store.state.short" :min="1" :max="10" color="green"/>
-                <p>long break</p>
+                <p>long break: {{store.state.long}} min </p>
             <q-slider v-model="store.state.long" :min="10" :max="30" color="green"/>
             </div>
           </q-tab-panel>
