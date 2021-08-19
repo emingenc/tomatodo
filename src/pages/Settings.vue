@@ -87,8 +87,15 @@
           </q-tab-panel>
 
           <q-tab-panel name="times" >
-            <div class="text-h6">Time</div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <div class="q-gutter-y-md ">
+
+                <p>focus</p>
+            <q-slider  v-model="store.state.focus" :min="15" :max="40" color="green"/>
+                <p>short break</p>
+            <q-slider v-model="store.state.short" :min="1" :max="10" color="green"/>
+                <p>long break</p>
+            <q-slider v-model="store.state.long" :min="10" :max="30" color="green"/>
+            </div>
           </q-tab-panel>
         </q-tab-panels>
     </div>
