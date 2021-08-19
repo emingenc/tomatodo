@@ -1,6 +1,6 @@
 <template>
   <div class=" window-height text-center" >
-    <div :class="'q-gutter-y-md '+'bg-' + store.state.primary " >
+    <div :class="'bg-' + store.state.primary " >
         <q-tabs
           v-model="tab"
           :class="' text-white bg-' + store.state.primary"
@@ -87,14 +87,14 @@
           </q-tab-panel>
 
           <q-tab-panel name="times" >
-            <div class="q-gutter-y-md ">
+            <div class="q-gutter-y-md text-white">
 
                 <p>focus: {{store.state.focus}} min</p>
-            <q-slider  v-model="store.state.focus" :min="15" :max="40" color="green"/>
+            <q-slider  v-model="store.state.focus" :min="15" :max="40" :color="store.state.secondary"/>
                 <p>short break: {{store.state.short}} min </p>
-            <q-slider v-model="store.state.short" :min="1" :max="10" color="green"/>
+            <q-slider v-model="store.state.short" :min="1" :max="10" :color="store.state.secondary"/>
                 <p>long break: {{store.state.long}} min </p>
-            <q-slider v-model="store.state.long" :min="10" :max="30" color="green"/>
+            <q-slider v-model="store.state.long" :min="10" :max="30" :color="store.state.secondary"/>
             </div>
           </q-tab-panel>
         </q-tab-panels>
