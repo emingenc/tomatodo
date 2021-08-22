@@ -2,17 +2,26 @@
   <router-view />
 </template>
 <script>
-import { defineComponent, provide } from 'vue';
-import { LocalStorage } from 'quasar'
+import { defineComponent, provide, onMounted } from 'vue';
+import { useQuasar } from 'quasar'
 import store from './store'
 
 export default defineComponent({
   name: 'App',
   setup(){
+    const $q = useQuasar()
+     onMounted(()=>{
+       try {
+      const lstore = $q.localStorage.getItem('localStore')
+      store.state = lstore
+    } catch (error) {
+      
+    }
+     }
+
+     )
     
-    const lstore = LocalStorage.getItem('localStore')
     
-   
 
     window.addEventListener("beforeunload", ()=>{$q.localStorage.set('localStore', store.state)})
     window.onbeforeunload = function(){
@@ -21,7 +30,7 @@ export default defineComponent({
     provide('store',store)
   },
   mounted(){
-    this.store.state = this.lstore
+    
   },
 })
 </script>
