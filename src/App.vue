@@ -10,19 +10,16 @@ export default defineComponent({
   name: 'App',
   setup(){
     const $q = useQuasar()
-     onMounted(()=>{
-       try {
-      const lstore = $q.localStorage.getItem('localStore')
-      store.state = lstore
-    } catch (error) {
-      
-    }
-     }
-
-     )
     
-    
+    onMounted(()=>{
 
+        // let lstore = $q.localStorage.getItem('localStore')
+        // if(lstore){
+
+        //   store.state = lstore
+        // }
+    
+    })
     window.addEventListener("beforeunload", ()=>{$q.localStorage.set('localStore', store.state)})
     window.onbeforeunload = function(){
     return "Are you sure you want to close the window?";
