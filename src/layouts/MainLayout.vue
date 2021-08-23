@@ -36,12 +36,7 @@ export default defineComponent({
   components: {BottomNav},
   setup () {
     const store = inject("store");
-    const $q = useQuasar()
-    let lstore = $q.localStorage.getItem('localStore')
-        if(lstore){
-
-          store.state = JSON.parse(lstore)
-        }
+    
       let menu =  [
                         {
                           title: 'How to',
@@ -71,6 +66,6 @@ export default defineComponent({
         leftDrawerOpen.value = !leftDrawerOpen.value
       }
     }
-  }
+  },
 })
 </script>
