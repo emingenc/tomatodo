@@ -28,7 +28,7 @@
 
 <script>
 import BottomNav from "src/components/BottomNav.vue";
-
+import { useQuasar } from 'quasar'
 import { defineComponent, inject } from 'vue'
 
 export default defineComponent({
@@ -36,6 +36,12 @@ export default defineComponent({
   components: {BottomNav},
   setup () {
     const store = inject("store");
+    const $q = useQuasar()
+    let lstore = $q.localStorage.getItem('localStore')
+        if(lstore){
+
+          store.state = JSON.parse(lstore)
+        }
       let menu =  [
                         {
                           title: 'How to',
