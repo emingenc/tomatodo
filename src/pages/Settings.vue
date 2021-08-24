@@ -1,25 +1,9 @@
 <template>
   <div class=" window-height text-center" >
     <div :class="'bg-' + store.state.primary " >
-        <q-tabs
-          v-model="tab"
-          :class="' text-white bg-' + store.state.primary"
-          align="justify"
-          narrow-indicator
-        >
-          <q-tab name="appearance" label="Appearance" />
-          <q-tab name="rewards" label="Rewards" />
-          <q-tab name="times" label="Times" />
-        </q-tabs>
+        
 
-        <q-separator />
-        <q-tab-panels
-          v-model="tab"
-          animated
-          :class="this.$q.screen.xs ? ('q-pa-sm' + ' bg-' + store.state.primary) : (' q-pa-xl' +' bg-' + store.state.primary) "
-          :style="this.$q.screen.xs ? ('' ) : 'width: 100% ; ' ">
-        >
-          <q-tab-panel name="appearance" class="q-pa-md">
+       
             <div class="text-h6 ">Appearance</div>
             Choose color
             <div class="q-pa-md q-gutter-md"> 
@@ -32,9 +16,7 @@
             <q-btn ripple color="teal" @click="store.methods.setColor( 'teal')" />
             <q-btn ripple color="orange" @click="store.methods.setColor( 'orange')" />
             </div>
-          </q-tab-panel>
 
-          <q-tab-panel name="rewards" >
             <div class="text-h6">Rewards</div>
             <q-input
               clearable
@@ -84,11 +66,9 @@
               v-model="store.state.reward6"
               label="Reward 6"
             />
-          </q-tab-panel>
-
-          <q-tab-panel name="times" >
-            <div class="q-gutter-y-md text-white">
-
+          
+            <div class="q-gutter-y-md q-pb-xl">
+              <div class="text-h6">Time settings</div>
                 <p>focus: {{store.state.focus}} min</p>
             <q-slider  v-model="store.state.focus" :min="15" :max="40" :color="store.state.secondary"/>
                 <p>short break: {{store.state.short}} min </p>
@@ -96,8 +76,9 @@
                 <p>long break: {{store.state.long}} min </p>
             <q-slider v-model="store.state.long" :min="10" :max="30" :color="store.state.secondary"/>
             </div>
-          </q-tab-panel>
-        </q-tab-panels>
+            <br>
+            <br>
+          
     </div>
   </div>
 </template>
