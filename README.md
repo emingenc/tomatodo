@@ -2,10 +2,10 @@
 
 Pomodoro task application that rewards user with luck wheel
 
-[DEMO](https://emingenc.github.io/pomodoro_wheel)
+   [DEMO](https://emingenc.github.io/pomodoro_wheel)
 
 <a href='https://emingenc.github.io/pomodoro_wheel' target="_blank" align="center">
-  <img src="./images/img1.png" width="160" title="how tot">
+  <img src="./images/img1.png" width="160" >
   <img src="./images/img2.png" width="160" alt="">
   <img src="./images/img3.png" width="160" alt="">
   <img src="./images/img4.png" width="160" alt="">
