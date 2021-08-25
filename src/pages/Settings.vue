@@ -9,12 +9,12 @@
             <div class="q-pa-md q-gutter-md"> 
             <q-btn ripple color="red-3"        @click="store.methods.setColor( 'red')" />
             <q-btn ripple color="indigo-3"  @click="store.methods.setColor( 'indigo')" />
-            <q-btn ripple color="blue"  @click="store.methods.setColor( 'blue')" />
-            <q-btn ripple color="green"  @click="store.methods.setColor( 'green')" />
-            <q-btn ripple color="purple"  @click="store.methods.setColor( 'purple')" />
-            <q-btn ripple color="brown"  @click="store.methods.setColor( 'brown')" />
-            <q-btn ripple color="teal" @click="store.methods.setColor( 'teal')" />
-            <q-btn ripple color="orange" @click="store.methods.setColor( 'orange')" />
+            <q-btn ripple color="blue-3"  @click="store.methods.setColor( 'blue')" />
+            <q-btn ripple color="green-3"  @click="store.methods.setColor( 'green')" />
+            <q-btn ripple color="purple-3"  @click="store.methods.setColor( 'purple')" />
+            <q-btn ripple color="brown-3"  @click="store.methods.setColor( 'brown')" />
+            <q-btn ripple color="teal-3" @click="store.methods.setColor( 'teal')" />
+            <q-btn ripple color="orange-3" @click="store.methods.setColor( 'orange')" />
             </div>
 
             <div class="text-h6">Rewards</div>
