@@ -70,11 +70,11 @@
             <div class="q-gutter-y-md q-pb-xl">
               <div class="text-h6 q-pa-xl">Time settings</div>
                 <p>focus: {{store.state.focus}} min</p>
-            <q-slider  v-model="store.state.focus" :min="15" :max="40" :color="store.state.secondary"/>
+            <q-slider  v-model="store.state.focus" :min="15" :max="45" :color="store.state.secondary"/>
                 <p>short break: {{store.state.short}} min </p>
-            <q-slider v-model="store.state.short" :min="1" :max="10" :color="store.state.secondary"/>
+            <q-slider v-model="store.state.short" :min="1" :max="15" :color="store.state.secondary"/>
                 <p>long break: {{store.state.long}} min </p>
-            <q-slider v-model="store.state.long" :min="10" :max="30" :color="store.state.secondary"/>
+            <q-slider v-model="store.state.long" :min="15" :max="30" :color="store.state.secondary"/>
             </div>
             <br>
             <br>
