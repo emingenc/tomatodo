@@ -4,9 +4,9 @@
         
 
        
-            <div class="text-h6 ">Appearance</div>
+            <div class="text-h6 q-pa-xl">Appearance</div>
             Choose color
-            <div class="q-pa-md q-gutter-md"> 
+            <div class="q-pa-xl q-gutter-md"> 
             <q-btn ripple color="red-3"        @click="store.methods.setColor( 'red')" />
             <q-btn ripple color="indigo-3"  @click="store.methods.setColor( 'indigo')" />
             <q-btn ripple color="blue-3"  @click="store.methods.setColor( 'blue')" />
@@ -17,7 +17,7 @@
             <q-btn ripple color="orange-3" @click="store.methods.setColor( 'orange')" />
             </div>
 
-            <div class="text-h6">Rewards</div>
+            <div class="text-h6 q-pa-xl">Rewards</div>
             <q-input
               clearable
               filled
@@ -68,7 +68,7 @@
             />
           
             <div class="q-gutter-y-md q-pb-xl">
-              <div class="text-h6">Time settings</div>
+              <div class="text-h6 q-pa-xl">Time settings</div>
                 <p>focus: {{store.state.focus}} min</p>
             <q-slider  v-model="store.state.focus" :min="15" :max="40" :color="store.state.secondary"/>
                 <p>short break: {{store.state.short}} min </p>
