@@ -8,8 +8,8 @@ const state = reactive({
   timeChoose: 25 ,
   isFinished:false,
   reward:null,
-  primary:'blue-3',
-  secondary:'blue-8',
+  primary:'indigo-3',
+  secondary:'indigo-8',
 
   focus:25,
   short:5,
