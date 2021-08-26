@@ -67,7 +67,7 @@
               label="Reward 6"
             />
           
-            <div class="q-gutter-y-md q-pb-xl">
+            <div class="q-gutter-y-md q-pa-xl">
               <div class="text-h6 q-pa-xl">Time settings</div>
                 <p>focus: {{store.state.focus}} min</p>
             <q-slider  v-model="store.state.focus" :min="15" :max="45" :color="store.state.secondary"/>
