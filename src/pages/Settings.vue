@@ -74,7 +74,7 @@
                 <p>short break: {{store.state.short}} min </p>
             <q-slider v-model="store.state.short" :min="1" :max="15" :color="store.state.secondary"/>
                 <p>long break: {{store.state.long}} min </p>
-            <q-slider v-model="store.state.long" :min="15" :max="30" :color="store.state.secondary"/>
+            <q-slider v-model="store.state.long" :min="10" :max="30" :color="store.state.secondary"/>
             </div>
             <br>
             <br>
