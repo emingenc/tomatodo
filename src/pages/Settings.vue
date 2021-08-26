@@ -16,7 +16,7 @@
             <q-btn ripple color="teal-3" @click="store.methods.setColor( 'teal')" />
             <q-btn ripple color="orange-3" @click="store.methods.setColor( 'orange')" />
             </div>
-
+<div class="q-gutter-y-md q-pa-xl">
             <div class="text-h6 q-pa-xl">Rewards</div>
             <q-input
               clearable
@@ -66,7 +66,7 @@
               v-model="store.state.reward6"
               label="Reward 6"
             />
-          
+   </div>       
             <div class="q-gutter-y-md q-pa-xl">
               <div class="text-h6 q-pa-xl">Time settings</div>
                 <p>focus: {{store.state.focus}} min</p>
