@@ -1,8 +1,8 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-toolbar :class="'bg-'+store.state.primary+ ' gt-xs text-white'">
-      <q-toolbar-title >
-        <strong>Pomodoro Wheel</strong> 
+      <q-toolbar-title  >
+        <strong class="q-pl-xl">Pomodoro Wheel</strong> 
       </q-toolbar-title>
       
     <bottom-nav
