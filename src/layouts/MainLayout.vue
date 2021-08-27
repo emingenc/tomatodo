@@ -1,8 +1,8 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-toolbar :class="'bg-'+store.state.primary+ ' gt-xs text-white'">
-      <q-toolbar-title>
-        Pomodoro Wheel
+      <q-toolbar-title  >
+        <strong class="q-pl-xl">Pomodoro Wheel</strong> 
       </q-toolbar-title>
       
     <bottom-nav
@@ -28,7 +28,6 @@
 
 <script>
 import BottomNav from "src/components/BottomNav.vue";
-import { useQuasar } from 'quasar'
 import { defineComponent, inject } from 'vue'
 
 export default defineComponent({
@@ -45,9 +44,9 @@ export default defineComponent({
                           link: "../../howto",
                         },
                         {
-                          title: 'home',
+                          title: 'focus',
                           caption: "",
-                          icon: "home",
+                          icon: "timer",
                           link: "../home",
                         },
                         {

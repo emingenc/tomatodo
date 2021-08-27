@@ -5,25 +5,28 @@
     :class="this.$q.screen.xs ? ('fit q-pa-lg' ) : 'q-pa-xl' "
     :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:70% ' ">
       <q-list  class="justify-around">
-        <q-item
-         
-          tag="label"
-          class="q-pa-md"
-          v-ripple
-          v-for="todo in store.state.todos"
-          :key="todo"
-        >
-          <q-item-section side top>
-            <q-checkbox false @click="store.methods.deleteTask(todo)" />
-          </q-item-section>
+        <q-slide-item @left="onLeft" @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
+        v-for="todo in store.state.todos"
+          :key="todo">
+        <template v-slot:left>
+          <div class="row items-center">
+            <q-icon left name="done" /> Done
+          </div>
+        </template>
+        <template v-slot:right>
+          <div class="row items-center">
+            Delete <q-icon right name="delete" />
+          </div>
+        </template>
 
-          <q-item-section>
-            <q-item-label>{{ todo }}</q-item-label>
+        <q-item>
+          <q-item-section avatar>
+            <q-icon color="primary" name="done" />
           </q-item-section>
-          <q-item-section top side>
-            <div class="text-grey-8 q-gutter-xs"></div>
-          </q-item-section>
+          <q-item-section>{{todo}}</q-item-section>
         </q-item>
+      </q-slide-item>
+       
       </q-list>
       <q-stepper
         v-model="store.state.step"
