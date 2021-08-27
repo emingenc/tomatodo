@@ -1,8 +1,8 @@
 <template>
   <q-layout view="lHh Lpr lFf">
     <q-toolbar :class="'bg-'+store.state.primary+ ' gt-xs text-white'">
-      <q-toolbar-title>
-        Pomodoro Wheel
+      <q-toolbar-title >
+        <strong>Pomodoro Wheel</strong> 
       </q-toolbar-title>
       
     <bottom-nav
@@ -44,9 +44,9 @@ export default defineComponent({
                           link: "../../howto",
                         },
                         {
-                          title: 'home',
+                          title: 'focus',
                           caption: "",
-                          icon: "home",
+                          icon: "timer",
                           link: "../home",
                         },
                         {
