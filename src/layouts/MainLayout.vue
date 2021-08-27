@@ -28,7 +28,6 @@
 
 <script>
 import BottomNav from "src/components/BottomNav.vue";
-import { useQuasar } from 'quasar'
 import { defineComponent, inject } from 'vue'
 
 export default defineComponent({

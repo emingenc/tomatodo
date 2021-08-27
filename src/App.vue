@@ -2,18 +2,13 @@
   <router-view />
 </template>
 <script>
-import { defineComponent, provide, reactive } from 'vue';
-import { useQuasar } from 'quasar'
+import { defineComponent, provide } from 'vue';
 import store from './store'
 
 export default defineComponent({
   name: 'App',
   setup(){
     
-//     window.addEventListener("beforeunload", ()=>{localStorage.set('localStore', JSON.stringify(store.state))})
-//     window.onbeforeunload = function(){
-//     return "Are you sure you want to close the window?";
-// }
     provide('store',store)
   },
   mounted(){

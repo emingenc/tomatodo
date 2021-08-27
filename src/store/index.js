@@ -1,6 +1,9 @@
-import { reactive } from "vue";
+import { reactive, watch } from "vue";
 
-const state = reactive({
+const STATE_NAME = "pomodoroState";
+
+
+const defaultState = {
 
   todos:[],
   text: '',
@@ -23,7 +26,16 @@ const state = reactive({
   reward5:"Meditate",
   reward6:"Favorite music",
   
-})
+}
+const getDefaultState = () => {
+  if (localStorage.getItem(STATE_NAME) !== null) {
+    return JSON.parse(localStorage.getItem(STATE_NAME));
+  }
+
+  return defaultState;
+};
+
+const state = reactive(getDefaultState());
 
 const methods = {
   addTask(todo){
@@ -44,6 +56,14 @@ const methods = {
 }
 
 const getters = {}
+
+watch(
+  () => state,
+  () => {
+    localStorage.setItem(STATE_NAME, JSON.stringify(state));
+  },
+  { deep: true }
+);
 
 export default {
   state,
