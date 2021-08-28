@@ -5,7 +5,9 @@
     :class="this.$q.screen.xs ? ('fit q-pa-lg' ) : 'q-pa-xl' "
     :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:70% ' ">
       <q-list  class="justify-around">
-        <q-slide-item @left="store.methods.deleteTask(todo)" @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
+        <q-slide-item @left="store.methods.deleteTask(todo)" 
+        :class="'text-center text-white bg-'+store.state.secondary"
+        @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
         v-for="todo in store.state.todos"
           :key="todo">
         <template v-slot:left>
@@ -23,7 +25,7 @@
           <q-item-section avatar>
             <q-icon color="primary" name="done" />
           </q-item-section>
-          <q-item-section class="text-center"><strong>{{todo}}</strong> </q-item-section>
+          <q-item-section :class="'text-center text-white bg-'+store.state.secondary"><strong>{{todo}}</strong> </q-item-section>
           <q-item-section avatar>
             <p class="text-center" style="font-size: 10px ; opacity: 50%">swipe <br> right done - left delete</p> 
           </q-item-section>
