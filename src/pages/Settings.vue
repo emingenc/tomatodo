@@ -7,23 +7,23 @@
             <div class="text-h6 q-pa-xl">Appearance</div>
             Choose color
             <div class="q-pa-xl q-gutter-md"> 
-            <q-btn ripple color="red-3"        @click="store.methods.setColor( 'red')" />
-            <q-btn ripple color="indigo-3"  @click="store.methods.setColor( 'indigo')" />
-            <q-btn ripple color="blue-3"  @click="store.methods.setColor( 'blue')" />
-            <q-btn ripple color="light-blue-3"  @click="store.methods.setColor( 'light-blue')" />
-            <q-btn ripple color="green-3"  @click="store.methods.setColor( 'green')" />
-            <q-btn ripple color="purple-3"  @click="store.methods.setColor( 'purple')" />
-            <q-btn ripple color="deep-purple-3"  @click="store.methods.setColor( 'deep-purple')" />
-            <q-btn ripple color="brown-3"  @click="store.methods.setColor( 'brown')" />
-            <q-btn ripple color="teal-3" @click="store.methods.setColor( 'teal')" />
-            <q-btn ripple color="cyan-3" @click="store.methods.setColor( 'cyan')" />
-            <q-btn ripple color="lime-3" @click="store.methods.setColor( 'lime')" />
-            <q-btn ripple color="yellow-3" @click="store.methods.setColor( 'yellow')" />
-            <q-btn ripple color="amber-3" @click="store.methods.setColor( 'amber')" />
-            <q-btn ripple color="orange-3" @click="store.methods.setColor( 'orange')" />
-            <q-btn ripple color="deep-orange-3" @click="store.methods.setColor( 'deep-orange')" />
-            <q-btn ripple color="grey" @click="store.methods.setColor( 'grey')" />
-            <q-btn ripple color="blue-grey" @click="store.methods.setColor( 'blue-grey')" />
+            <q-btn round color="red-3"        @click="store.methods.setColor( 'red')" />
+            <q-btn round color="indigo-3"  @click="store.methods.setColor( 'indigo')" />
+            <q-btn round color="blue-3"  @click="store.methods.setColor( 'blue')" />
+            <q-btn round color="light-blue-3"  @click="store.methods.setColor( 'light-blue')" />
+            <q-btn round color="green-3"  @click="store.methods.setColor( 'green')" />
+            <q-btn round color="purple-3"  @click="store.methods.setColor( 'purple')" />
+            <q-btn round color="deep-purple-3"  @click="store.methods.setColor( 'deep-purple')" />
+            <q-btn round color="brown-3"  @click="store.methods.setColor( 'brown')" />
+            <q-btn round color="teal-3" @click="store.methods.setColor( 'teal')" />
+            <q-btn round color="cyan-3" @click="store.methods.setColor( 'cyan')" />
+            <q-btn round color="lime-3" @click="store.methods.setColor( 'lime')" />
+            <q-btn round color="yellow-3" @click="store.methods.setColor( 'yellow')" />
+            <q-btn round color="amber-3" @click="store.methods.setColor( 'amber')" />
+            <q-btn round color="orange-3" @click="store.methods.setColor( 'orange')" />
+            <q-btn round color="deep-orange-3" @click="store.methods.setColor( 'deep-orange')" />
+            <q-btn round color="grey" @click="store.methods.setColor( 'grey')" />
+            <q-btn round color="blue-grey" @click="store.methods.setColor( 'blue-grey')" />
             </div>
 <div class="q-gutter-y-md q-pa-xl">
             <div class="text-h6 q-pa-xl">Rewards</div>
