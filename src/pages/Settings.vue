@@ -16,6 +16,10 @@
             <q-btn ripple color="deep-purple-3"  @click="store.methods.setColor( 'deep-purple')" />
             <q-btn ripple color="brown-3"  @click="store.methods.setColor( 'brown')" />
             <q-btn ripple color="teal-3" @click="store.methods.setColor( 'teal')" />
+            <q-btn ripple color="cyan-3" @click="store.methods.setColor( 'cyan')" />
+            <q-btn ripple color="lime-3" @click="store.methods.setColor( 'lime')" />
+            <q-btn ripple color="yellow-3" @click="store.methods.setColor( 'yellow')" />
+            <q-btn ripple color="amber-3" @click="store.methods.setColor( 'amber')" />
             <q-btn ripple color="orange-3" @click="store.methods.setColor( 'orange')" />
             </div>
 <div class="q-gutter-y-md q-pa-xl">
