@@ -22,6 +22,8 @@
             <q-btn ripple color="amber-3" @click="store.methods.setColor( 'amber')" />
             <q-btn ripple color="orange-3" @click="store.methods.setColor( 'orange')" />
             <q-btn ripple color="deep-orange-3" @click="store.methods.setColor( 'deep-orange')" />
+            <q-btn ripple color="grey" @click="store.methods.setColor( 'grey')" />
+            <q-btn ripple color="blue-grey" @click="store.methods.setColor( 'blue-grey')" />
             </div>
 <div class="q-gutter-y-md q-pa-xl">
             <div class="text-h6 q-pa-xl">Rewards</div>
