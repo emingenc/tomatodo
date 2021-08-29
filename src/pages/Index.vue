@@ -63,7 +63,8 @@
           :header-nav="store.state.step > 2"
         > 
           <!-- <Timer :total="25" /> -->
-          <Timer :total="store.state.focus " :step="3"/>
+          <Timer class="flex flex-center" style="height: 500px"
+          :total="store.state.focus " :step="3"/>
         </q-step>
 
         <q-step
