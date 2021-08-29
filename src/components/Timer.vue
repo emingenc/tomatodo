@@ -11,7 +11,7 @@
       :max="initialTime"
       :value="totalTime"
       :size="this.$q.screen.xs ? ('221px' ) : '500px' " 
-      :thickness="0.10"
+      :thickness="0.07"
       :color="timerColor"
       track-color="dark"
     >
