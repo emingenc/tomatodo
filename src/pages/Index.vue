@@ -49,7 +49,8 @@
           :done="store.state.step > 1"
           :header-nav="store.state.step > 1"
         >
-          <Todo />
+          <Todo
+          style="height: 400px" />
         </q-step>
 
         <q-step
