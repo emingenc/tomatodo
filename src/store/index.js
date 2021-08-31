@@ -8,6 +8,7 @@ const defaultState = {
   todos:[],
   text: '',
   step: 1,
+  totalStep: 0 ,
   session: 1,
   timeChoose: 25 ,
   isFinished:false,
@@ -52,6 +53,7 @@ const methods = {
   },
   deleteTask(todo){
     state.todos = state.todos.filter(item => item != todo)
+    state.totalStep = state.totalStep + state.step
     state.step = 1
   }
 }
