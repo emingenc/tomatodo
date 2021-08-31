@@ -56,7 +56,7 @@
         <q-step
           :name="2"
           inactive-color="red-3"
-          :title="`Work for ${store.state.focus} minutes`"
+          :title="`Focus for ${store.state.focus} minutes`"
           caption=""
           icon="settings"
           :done="store.state.step > 2"
