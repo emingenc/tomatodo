@@ -44,7 +44,7 @@ const methods = {
     if (state.todos.length < 1){
     todo ? state.todos.push(todo) : ''
     state.text = ''
-    state.step = 2
+    state.step ++
   }
   },
   setColor(color){

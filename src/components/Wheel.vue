@@ -74,7 +74,7 @@ export default defineComponent({
   methods: {
     done(r) {
       this.store.state.reward = r ;
-      this.store.state.step = 4
+      this.store.state.step ++
 
     },
   },
