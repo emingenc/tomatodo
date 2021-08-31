@@ -34,9 +34,8 @@
        
       </q-list>
       <q-stepper
-        v-model="store.state.step"
+        v-model="getStep"
         vertical
-        ref="stepper"
         :inactive-color="store.state.secondary.replace('8', '5')"
         :active-color="store.state.secondary"
         :class="'bg-'+store.state.primary"
@@ -45,7 +44,6 @@
           :name="1"
           title="Decide on the Task to be done"
           prefix="1"
-          :done="store.state.step > 1"
           :header-nav="store.state.step > 1"
         >
           <Todo
@@ -54,10 +52,8 @@
 
         <q-step
           :name="2"
-          inactive-color="red-3"
           :title="`Focus for ${store.state.focus} minutes`"
           prefix="2"
-          :done="store.state.step > 2"
           :header-nav="store.state.step > 2"
         > 
           <!-- <Timer :total="25" /> -->
@@ -67,17 +63,14 @@
 
         <q-step
           :name="3"
-          inactive-color="red-3"
           title="Take a short break, reward yourself"
           prefix="3"
-          :done="store.state.step > 3"
           :header-nav="store.state.step > 3"
         >
           <Wheel />
         </q-step>
         <q-step
           :name="4"
-          inactive-color="blue-3"
           :title="`Rest ${ store.state.isLong ? store.state.long : store.state.short}  minutes`"
           caption=""
           prefix="4"
@@ -114,10 +107,14 @@ export default defineComponent({
   },
   setup() {
     const store = inject("store");
-
     return {
       store,
     };
   },
+  computed:{
+    getStep() {
+      return (this.store.state.step % 4) + 1
+    }
+  }
 });
 </script>
