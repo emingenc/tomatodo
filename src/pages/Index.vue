@@ -37,15 +37,14 @@
         v-model="store.state.step"
         vertical
         ref="stepper"
-        animated
-        :inactive-color="'red-1'"
+        :inactive-color="store.state.secondary.replace('8', '5')"
         :active-color="store.state.secondary"
         :class="'bg-'+store.state.primary"
       >
         <q-step
           :name="1"
           title="Decide on the Task to be done"
-          icon="task"
+          prefix="1"
           :done="store.state.step > 1"
           :header-nav="store.state.step > 1"
         >
@@ -57,8 +56,7 @@
           :name="2"
           inactive-color="red-3"
           :title="`Focus for ${store.state.focus} minutes`"
-          caption=""
-          icon="settings"
+          prefix="2"
           :done="store.state.step > 2"
           :header-nav="store.state.step > 2"
         > 
@@ -71,7 +69,8 @@
           :name="3"
           inactive-color="red-3"
           title="Take a short break, reward yourself"
-          icon="add_comment"
+          prefix="3"
+          :done="store.state.step > 3"
           :header-nav="store.state.step > 3"
         >
           <Wheel />
@@ -81,9 +80,8 @@
           inactive-color="blue-3"
           :title="`Rest ${ store.state.isLong ? store.state.long : store.state.short}  minutes`"
           caption=""
-          icon="settings"
-          :done="store.state.step > 2"
-          :header-nav="store.state.step > 2"
+          prefix="4"
+          :header-nav="store.state.step > 4"
           class=" q-gutter-md "
         >
           <div class="text-center text-red-10  q-gutter-xs">
@@ -102,7 +100,7 @@
 </template>
 
 <script>
-import { defineComponent, ref, inject } from "vue";
+import { defineComponent, inject } from "vue";
 import Timer from "components/Timer.vue";
 import Wheel from "components/Wheel.vue";
 import Todo from "components/Todo.vue";
