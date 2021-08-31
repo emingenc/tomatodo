@@ -54,7 +54,7 @@ const methods = {
   deleteTask(todo){
     state.todos = state.todos.filter(item => item != todo)
     state.totalStep = state.totalStep + state.step
-    state.step = 1
+    state.step = 0
   }
 }
 

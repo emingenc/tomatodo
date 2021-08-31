@@ -58,7 +58,7 @@
         > 
           <!-- <Timer :total="25" /> -->
           <Timer class="flex flex-center" style="height: 500px"
-          :total="store.state.focus " :step="3"/>
+          :total="store.state.focus " />
         </q-step>
 
         <q-step
@@ -84,8 +84,8 @@
           class="q-pa-md"
           label="long - short" @click="store.state.isLong = !store.state.isLong" />
           </div>
-          <Timer v-if="store.state.isLong" :total="store.state.long" :step="2" />
-          <Timer v-if="!store.state.isLong" :total="store.state.short" :step="2" />
+          <Timer v-if="store.state.isLong" :total="store.state.long"  />
+          <Timer v-if="!store.state.isLong" :total="store.state.short"  />
         </q-step>
       </q-stepper>
     </div>
