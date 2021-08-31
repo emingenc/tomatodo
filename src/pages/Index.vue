@@ -56,7 +56,7 @@
         <q-step
           :name="2"
           inactive-color="red-3"
-          title="Work for 25 minutes"
+          :title="`Work for ${store.state.focus} minutes`"
           caption=""
           icon="settings"
           :done="store.state.step > 2"
@@ -79,7 +79,7 @@
         <q-step
           :name="4"
           inactive-color="blue-3"
-          title="Rest 5 minutes"
+          :title="`Rest ${ store.state.isLong ? store.state.long : store.state.short}  minutes`"
           caption=""
           icon="settings"
           :done="store.state.step > 2"
