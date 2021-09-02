@@ -49,7 +49,7 @@
           <Todo
           style="height: 400px" />
           <q-btn :color="store.state.secondary" 
-          icon="arrow" label="Next" 
+           label="Next" 
           flat
           @click="store.state.step ++" />
         </q-step>
