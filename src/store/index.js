@@ -13,8 +13,8 @@ const defaultState = {
   timeChoose: 25 ,
   isFinished:false,
   reward:null,
-  primary:'indigo-3',
-  secondary:'indigo-8',
+  primary:'deep-orange-3',
+  secondary:'deep-orange-8',
 
   focus:25,
   short:5,
