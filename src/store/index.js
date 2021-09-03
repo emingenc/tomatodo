@@ -8,6 +8,7 @@ const defaultState = {
   todos:[],
   text: '',
   step: 1,
+  point:0,
   totalStep: 0 ,
   session: 1,
   timeChoose: 25 ,
