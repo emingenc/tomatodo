@@ -23,7 +23,7 @@ const defaultState = {
 
   reward1:"Social media",
   reward2:"Drink(Tea coffe etc)",
-  reward3:"short game(mobile/pc)",
+  reward3:"short game",
   reward4:"Short YouTube video",
   reward5:"Meditate",
   reward6:"Favorite music",
