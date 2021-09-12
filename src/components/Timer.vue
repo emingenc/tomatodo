@@ -10,7 +10,7 @@
       class="text-white q-ma-sm text-center"
       :max="initialTime"
       :value="totalTime"
-      :size="this.$q.screen.xs ? ('221px' ) : '500px' " 
+      :size="this.$q.screen.xs ? ('221px' ) : '350px' " 
       :thickness="0.07"
       :color="timerColor"
       track-color="dark"
