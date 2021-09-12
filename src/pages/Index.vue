@@ -3,7 +3,7 @@
     <div
     @dblclick="this.store.state.step ++"  
     :class="this.$q.screen.xs ? ('fit q-pa-lg' ) : 'q-pa-xl' "
-    :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:300px ' ">
+    :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:61.8%' ">
       <q-list  class="justify-around">
         <q-slide-item @left="store.methods.deleteTask(todo)" 
         :class="'text-center text-white bg-'+store.state.secondary"
