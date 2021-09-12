@@ -88,8 +88,8 @@
           class="q-pa-md"
           label="long - short" @click="store.state.isLong = !store.state.isLong" />
           </div>
-          <Timer v-if="store.state.isLong" :total="store.state.long"  />
-          <Timer v-if="!store.state.isLong" :total="store.state.short"  />
+          <Timer class="flex flex-center" v-if="store.state.isLong" :total="store.state.long" style="height: 500px" />
+          <Timer class="flex flex-center" v-if="!store.state.isLong" :total="store.state.short" style="height: 500px" />
         </q-step>
       </q-stepper>
     </div>
