@@ -19,9 +19,9 @@
 
        
     </q-card>
-    <q-list  :class="'justify between fit bg-'+store.state.primary">
+    <q-list  :class="'justify-between fit bg-'+store.state.primary">
         <q-slide-item @left="store.methods.deleteTask(todo)" 
-        :class="'text-center text-white bg-'+store.state.secondary"
+        :class="'q-ma-lg text-center text-white bg-'+store.state.secondary"
         @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
         v-for="todo in store.state.todos"
           :key="todo">
