@@ -44,6 +44,12 @@ export default defineComponent({
                           link: "../../howto",
                         },
                         {
+                          title: 'todo',
+                          caption: "",
+                          icon: "task",
+                          link: "../todos",
+                        },
+                        {
                           title: 'focus',
                           caption: "",
                           icon: "timer",

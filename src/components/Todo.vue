@@ -1,8 +1,8 @@
 <template>
-    <div class="q-pa-sm  full-width text-white ">
-    <q-card flat :class="'bg-'+store.state.primary"    style="width:100% ; ">
+    <div class="q-pa-sm  text-white  fit">
+    <q-card flat :class="'fit bg-'+store.state.primary"    style="width:100% ; ">
       
-      <q-input v-if="store.state.todos.length < 1" rounded standout bottom-slots
+      <q-input v-if="store.state.todos.length < store.state.todoLimit" rounded standout bottom-slots
        @keyup.enter ="store.methods.addTask(store.state.text)"
                  v-model="store.state.text"
                 label="Add task" 
@@ -19,6 +19,35 @@
 
        
     </q-card>
+    <q-list  :class="'justify between fit bg-'+store.state.primary">
+        <q-slide-item @left="store.methods.deleteTask(todo)" 
+        :class="'text-center text-white bg-'+store.state.secondary"
+        @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
+        v-for="todo in store.state.todos"
+          :key="todo">
+        <template v-slot:left>
+          <div class="row items-center">
+            <q-icon left name="done" /> Done
+          </div>
+        </template>
+        <template v-slot:right>
+          <div class="row items-center">
+            Delete <q-icon right name="delete" />
+          </div>
+        </template>
+
+        <q-item>
+          <q-item-section avatar>
+            <q-icon color="primary" name="done" />
+          </q-item-section>
+          <q-item-section :class="'text-center text-white bg-'+store.state.secondary"><strong>{{todo}}</strong> </q-item-section>
+          <q-item-section avatar>
+            <p class="text-center" style="font-size: 10px ; opacity: 50%">swipe <br> right done - left delete</p> 
+          </q-item-section>
+        </q-item>
+      </q-slide-item>
+       
+      </q-list>
     
     </div>
   

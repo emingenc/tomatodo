@@ -7,6 +7,7 @@ const routes = [
       { path: '/', redirect:'/home' },
       { path: '/howto', component: () => import('pages/Howto.vue') },
       { path: '/home', component: () => import('pages/Index.vue') },
+      { path: '/todos', component: () => import('pages/Todo.vue') },
       { path: '/settings', component: () => import('pages/Settings.vue') },
     ]
   },

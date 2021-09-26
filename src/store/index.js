@@ -8,6 +8,7 @@ const defaultState = {
   todos:[],
   text: '',
   step: 1,
+  todoLimit:10,
   point:0,
   totalStep: 0 ,
   session: 1,
@@ -42,10 +43,9 @@ const state = reactive(getDefaultState());
 
 const methods = {
   addTask(todo){
-    if (state.todos.length < 1){
+    if (state.todos.length < state.todoLimit){
     todo ? state.todos.push(todo) : ''
     state.text = ''
-    state.step ++
   }
   },
   setColor(color){
@@ -55,7 +55,6 @@ const methods = {
   deleteTask(todo){
     state.todos = state.todos.filter(item => item != todo)
     state.totalStep = state.totalStep + state.step
-    state.step = 0
   }
 }
 

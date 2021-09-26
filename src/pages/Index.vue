@@ -4,35 +4,7 @@
     @dblclick="this.store.state.step ++"  
     :class="this.$q.screen.xs ? ('fit q-pa-lg' ) : 'q-pa-xl' "
     :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:61.8%' ">
-      <q-list  class="justify-around">
-        <q-slide-item @left="store.methods.deleteTask(todo)" 
-        :class="'text-center text-white bg-'+store.state.secondary"
-        @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
-        v-for="todo in store.state.todos"
-          :key="todo">
-        <template v-slot:left>
-          <div class="row items-center">
-            <q-icon left name="done" /> Done
-          </div>
-        </template>
-        <template v-slot:right>
-          <div class="row items-center">
-            Delete <q-icon right name="delete" />
-          </div>
-        </template>
-
-        <q-item>
-          <q-item-section avatar>
-            <q-icon color="primary" name="done" />
-          </q-item-section>
-          <q-item-section :class="'text-center text-white bg-'+store.state.secondary"><strong>{{todo}}</strong> </q-item-section>
-          <q-item-section avatar>
-            <p class="text-center" style="font-size: 10px ; opacity: 50%">swipe <br> right done - left delete</p> 
-          </q-item-section>
-        </q-item>
-      </q-slide-item>
-       
-      </q-list>
+      
       <q-stepper
         v-model="getStep"
         vertical
