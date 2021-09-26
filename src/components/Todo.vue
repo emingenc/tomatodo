@@ -1,5 +1,5 @@
 <template>
-    <div class="q-pa-sm  text-white  fit">
+    <div :class="' q-pa-lg fit text-white bg-'+store.state.primary">
     <q-card flat :class="'fit bg-'+store.state.primary"    style="width:100% ; ">
       
       <q-input v-if="store.state.todos.length < store.state.todoLimit" rounded standout bottom-slots
@@ -19,9 +19,9 @@
 
        
     </q-card>
-    <q-list  :class="'justify-between fit bg-'+store.state.primary">
+    <q-list  :class="'bg-'+store.state.primary">
         <q-slide-item @left="store.methods.deleteTask(todo)" 
-        :class="'q-ma-lg text-center text-white bg-'+store.state.secondary"
+        :class="'q-ma-md  text-center text-white bg-'+store.state.secondary"
         @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
         v-for="todo in store.state.todos"
           :key="todo">
