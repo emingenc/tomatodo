@@ -1,6 +1,6 @@
 <template>
-    <div :class="' q-pa-lg fit text-white bg-'+store.state.primary">
-    <q-card flat :class="'fit bg-'+store.state.primary"    style="width:100% ; ">
+    <div :class="' q-pa-lg text-white bg-'+store.state.primary">
+    <q-card flat :class="'bg-'+store.state.primary"   >
       
       <q-input v-if="store.state.todos.length < store.state.todoLimit" rounded standout bottom-slots
        @keyup.enter ="store.methods.addTask(store.state.text)"
@@ -19,9 +19,10 @@
 
        
     </q-card>
-    <q-list  :class="'bg-'+store.state.primary">
+    <q-list  :class=" ' bg-'+store.state.primary">
         <q-slide-item @left="store.methods.deleteTask(todo)" 
         :class="'q-ma-md  text-center text-white bg-'+store.state.secondary"
+        :style="'height:50px ;'"
         @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
         v-for="todo in store.state.todos"
           :key="todo">
