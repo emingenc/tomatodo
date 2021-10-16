@@ -1,7 +1,7 @@
-<template>
-<div >
+<template> 
+<div>
 
-<Todo :class="'full-height bg-'+store.state.primary" style="height:100% "/>
+<Todo />
 </div>
   
 </template>
