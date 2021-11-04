@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout :class="'fit bg-'+store.state.primary" view="lHh Lpr lFf">
     <q-toolbar :class="'bg-'+store.state.primary+ ' gt-xs text-white'">
       <q-toolbar-title  >
         <strong class="q-pl-xl">Pomodoro Wheel</strong> 
@@ -12,8 +12,8 @@
           class=" gt-xs"
         />
     </q-toolbar>
-    <q-page-container :class="'bg-'+store.state.primary">
-      <router-view />
+    <q-page-container  >
+      <router-view  />
     </q-page-container>
     <q-footer reveal elevated :class="'flex flex-center text-white xs '+'bg-'+store.state.primary">
       <bottom-nav

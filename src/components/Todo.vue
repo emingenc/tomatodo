@@ -1,6 +1,6 @@
 <template>
-    <div :class="' q-pa-lg text-white bg-'+store.state.primary">
-    <q-card flat :class="'bg-'+store.state.primary"   >
+    <div :class="'q-pa-lg text-white bg-'+store.state.primary">
+    <q-card flat :class="' fit bg-'+store.state.primary"   >
       
       <q-input v-if="store.state.todos.length < store.state.todoLimit" rounded standout bottom-slots
        @keyup.enter ="store.methods.addTask(store.state.text)"
