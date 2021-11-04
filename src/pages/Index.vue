@@ -1,9 +1,38 @@
 <template>
   <q-page :class=" 'bg-'+store.state.primary ">
+
+    
     <div
     @dblclick="this.store.state.step ++"  
     :class="this.$q.screen.xs ? ('fit q-pa-lg' ) : 'q-pa-xl' "
     :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:61.8%' ">
+
+    <q-slide-item v-if="store.state.currentTodo" @left="store.methods.deleteTask(store.state.currentTodo)" 
+        :class="'q-ma-md  text-center text-white bg-'+store.state.secondary"
+        :style="'height:50px ;'"
+        @right="store.methods.deleteTask(store.state.currentTodo)" left-color="green" right-color="red"
+        >
+        <template v-slot:left>
+          <div class="row items-center">
+            <q-icon left name="done" /> Done
+          </div>
+        </template>
+        <template v-slot:right>
+          <div class="row items-center">
+            Delete <q-icon right name="delete" />
+          </div>
+        </template>
+
+        <q-item>
+          <q-item-section avatar>
+            <q-icon color="primary" name="done" />
+          </q-item-section>
+          <q-item-section :class="'text-center text-white bg-'+store.state.secondary"><strong>{{store.state.currentTodo}}</strong> </q-item-section>
+          <q-item-section avatar>
+            <p class="text-center" style="font-size: 10px ; opacity: 50%">swipe <br> right done - left delete</p> 
+          </q-item-section>
+        </q-item>
+      </q-slide-item>
       
       <q-stepper
         v-model="getStep"
@@ -18,12 +47,20 @@
           prefix="1"
           :header-nav="store.state.step > 1"
         >
-          <Todo
-          style="height: 400px" />
-          <q-btn :color="store.state.secondary" 
-           label="Next" 
-          flat
-          @click="store.state.step ++" />
+          <select-todo v-if="!store.state.addNewTodo"/>
+          <add-new v-if="store.state.addNewTodo"/>
+
+          <div v-if="!store.state.addNewTodo" class="flex justify-between">  
+
+            <q-btn v-if="store.state.currentTodo" :color="store.state.secondary" 
+            label="Next" 
+            flat
+            @click="store.state.step ++" />
+            <q-btn  :color="store.state.secondary" 
+            label="Add New" 
+            flat
+            @click="store.state.addNewTodo = true" />
+          </div>
         </q-step>
 
         <q-step
@@ -72,14 +109,15 @@
 import { defineComponent, inject } from "vue";
 import Timer from "components/Timer.vue";
 import Wheel from "components/Wheel.vue";
-import Todo from "components/Todo.vue";
-
+import SelectTodo from "components/SelectTodo.vue";
+import AddNew from "src/components/AddNew.vue";
 export default defineComponent({
   name: "PageIndex",
   components: {
     Timer,
     Wheel,
-    Todo,
+    SelectTodo,
+    AddNew,
   },
   setup() {
     const store = inject("store");

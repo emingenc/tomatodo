@@ -3,7 +3,7 @@
     <div :class="'bg-' + store.state.primary">
       <div class="text-h6 q-pa-xl">Appearance</div>
       Choose color
-      <div class="q-pa-xl q-gutter-lg" style="max-width: 400px">
+      <div class="q-pa-xl q-gutter-lg" style="max-width: %61">
         <q-btn round color="red-3" @click="store.methods.setColor('red')" />
         <q-btn
           round
