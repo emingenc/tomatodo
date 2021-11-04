@@ -6,6 +6,8 @@ const STATE_NAME = "pomodoroState";
 const defaultState = {
 
   todos:[],
+  completedTodos:['assa','assa'],
+  currentTodo: null,
   text: '',
   step: 1,
   todoLimit:10,
@@ -17,6 +19,7 @@ const defaultState = {
   reward:null,
   primary:'orange-3',
   secondary:'orange-8',
+  addNewTodo:false,
 
   focus:25,
   short:5,
@@ -48,14 +51,22 @@ const methods = {
     state.text = ''
   }
   },
+  deleteTask(todo){
+    state.todos = state.todos.filter(item => item != todo)
+    state.totalStep = state.totalStep + state.step
+    if (state.currentTodo == todo){
+      state.currentTodo = null
+    }
+  },
+  addCompletedTask(todo){
+    todo ? state.completedTodos.push(todo) : ''
+    methods.deleteTask(todo)
+  },
   setColor(color){
     state.primary = `${color}-3`
     state.secondary = `${color}-8`
   },
-  deleteTask(todo){
-    state.todos = state.todos.filter(item => item != todo)
-    state.totalStep = state.totalStep + state.step
-  }
+  
 }
 
 const getters = {}

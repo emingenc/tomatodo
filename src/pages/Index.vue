@@ -7,7 +7,7 @@
     :class="this.$q.screen.xs ? ('fit q-pa-lg' ) : 'q-pa-xl' "
     :style="this.$q.screen.xs ? ('' ) : 'margin-right: auto; margin-left: auto;  width:61.8%' ">
 
-    <q-slide-item v-if="store.state.currentTodo" @left="store.methods.deleteTask(store.state.currentTodo)" 
+    <q-slide-item v-if="store.state.currentTodo" @left="store.methods.addCompletedTask(store.state.currentTodo)" 
         :class="'q-ma-md  text-center text-white bg-'+store.state.secondary"
         :style="'height:50px ;'"
         @right="store.methods.deleteTask(store.state.currentTodo)" left-color="green" right-color="red"

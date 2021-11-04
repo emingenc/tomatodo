@@ -1,7 +1,11 @@
 <template>
-    <div :class="'q-pa-lg text-white bg-'+store.state.primary">
+    <div :class="'q-pa-md text-white bg-'+store.state.primary">
     <q-card flat :class="' fit bg-'+store.state.primary"   >
-      
+        <h6 class="text-center" v-if="store.state.completedTodos.length > 2 ">
+            {{store.state.completedTodos.length}} tasks completed
+            <q-icon name="done " />
+               
+        </h6>
       <q-input v-if="store.state.todos.length < store.state.todoLimit" rounded standout bottom-slots
        @keyup.enter ="store.methods.addTask(store.state.text)"
                  v-model="store.state.text"
@@ -20,7 +24,7 @@
        
     </q-card>
     <q-list  :class=" ' bg-'+store.state.primary">
-        <q-slide-item @left="store.methods.deleteTask(todo)" 
+        <q-slide-item @left="store.methods.addCompletedTask(todo)" 
         :class="'q-ma-md  text-center text-white bg-'+store.state.secondary"
         :style="'height:50px ;'"
         @right="store.methods.deleteTask(todo)" left-color="green" right-color="red"
