@@ -47,10 +47,10 @@
           prefix="1"
           :header-nav="store.state.step > 1"
         >
-          <select-todo v-if="!store.state.addNewTodo"/>
-          <add-new v-if="store.state.addNewTodo"/>
+          <select-todo v-if="!store.state.addNewTodo && store.state.todos.length > 0 "/>
+          <add-new v-if="store.state.addNewTodo || store.state.todos.length == 0"/>
 
-          <div v-if="!store.state.addNewTodo" class="flex justify-between">  
+          <div v-if="!store.state.addNewTodo && store.state.todos.length > 0" class="flex justify-between">  
 
             <q-btn v-if="store.state.currentTodo" :color="store.state.secondary" 
             label="Next" 

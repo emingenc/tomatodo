@@ -9,14 +9,14 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest]
-        node: [12]
+        node: [14]
 
     steps:
       - name: Checkout
         uses: actions/checkout@master
 
       - name: Setup node env
-        uses: actions/setup-node@v2.1.2
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node }}
 
@@ -27,10 +27,11 @@ jobs:
         run: yarn global add @quasar/cli
 
       - name: Generate
-        run: quasar build
+        run: GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} quasar build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist/spa
+    

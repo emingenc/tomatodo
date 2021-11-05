@@ -2,7 +2,11 @@
   <q-layout :class="'fit bg-'+store.state.primary" view="lHh Lpr lFf">
     <q-toolbar :class="'bg-'+store.state.primary+ ' gt-xs text-white'">
       <q-toolbar-title  >
-        <strong class="q-pl-xl">Pomodoro Wheel</strong> 
+          <q-avatar class="q-pl-xl q-pr-xl"  size="68px">
+            <img :src="require('assets/images/logo.png')" alt="logo"  />
+          </q-avatar>
+        <strong class="q-pl-xl q-pr-xl">Pomodoro Wheel</strong> 
+
       </q-toolbar-title>
       
     <bottom-nav

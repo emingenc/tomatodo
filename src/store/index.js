@@ -9,7 +9,7 @@ const defaultState = {
   completedTodos:['assa','assa'],
   currentTodo: null,
   text: '',
-  step: 1,
+  step: 0,
   todoLimit:10,
   point:0,
   totalStep: 0 ,
