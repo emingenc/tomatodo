@@ -16,12 +16,12 @@
                                 class="cursor-pointer" />
             </template>
         </q-input>
-        <div class="flex justify-between">  
+        <div v-if="store.state.todos.length != 0" class="flex justify-between">  
 
             <q-btn :color="store.state.secondary" 
             label="Cancel" 
             flat
-            @click="addNew" />
+            @click="store.state.addNewTodo = false" />
             
           </div>
 
