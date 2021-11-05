@@ -109,7 +109,7 @@
 import { defineComponent, inject } from "vue";
 import Timer from "components/Timer.vue";
 import Wheel from "components/Wheel.vue";
-import SelectTodo from "components/SelectTodo.vue";
+import SelectTodo from "components/selectTodo.vue";
 import AddNew from "src/components/AddNew.vue";
 export default defineComponent({
   name: "PageIndex",
