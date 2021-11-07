@@ -59,6 +59,7 @@
           <q-input
             clearable
             filled
+            :rules="[ val => val.length != 0 || 'This field is required' ]"
             class="q-pa-sm"
             :color="store.state.primary"
             v-model="store.state.reward1"
@@ -67,6 +68,7 @@
           <q-input
             clearable
             filled
+            :rules="[ val => val.length != 0 || 'This field is required' ]"
             class="q-pa-sm"
             :color="store.state.primary"
             v-model="store.state.reward2"
@@ -75,6 +77,7 @@
           <q-input
             clearable
             filled
+            :rules="[ val => val.length != 0 || 'This field is required' ]"
             class="q-pa-sm"
             :color="store.state.primary"
             v-model="store.state.reward3"
@@ -83,6 +86,7 @@
           <q-input
             clearable
             filled
+            :rules="[ val => val.length != 0 || 'This field is required' ]"
             class="q-pa-sm"
             :color="store.state.primary"
             v-model="store.state.reward4"
@@ -91,6 +95,7 @@
           <q-input
             clearable
             filled
+            :rules="[ val => val.length != 0 || 'This field is required' ]"
             class="q-pa-sm"
             :color="store.state.primary"
             v-model="store.state.reward5"
@@ -99,6 +104,7 @@
           <q-input
             clearable
             filled
+            :rules="[ val => val.length != 0 || 'This field is required' ]"
             class="q-pa-sm"
             :color="store.state.primary"
             v-model="store.state.reward6"

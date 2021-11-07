@@ -6,7 +6,7 @@ const STATE_NAME = "pomodoroState";
 const defaultState = {
 
   todos:[],
-  completedTodos:['assa','assa'],
+  completedTodos:[],
   currentTodo: null,
   text: '',
   step: 0,
@@ -17,8 +17,8 @@ const defaultState = {
   timeChoose: 25 ,
   isFinished:false,
   reward:null,
-  primary:'orange-3',
-  secondary:'orange-8',
+  primary:'red-3',
+  secondary:'red-8',
   addNewTodo:false,
 
   focus:25,
