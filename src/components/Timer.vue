@@ -107,7 +107,7 @@ export default {
   methods: {
     showNotification () {
         this.$q.notify({
-          message: ' <p  style="width: 600px; text-align: center;"> <b> Time finished. Go to next step </b> </p>',
+          message: ' <p  style="width: 600px; text-align: center;"> <b> Countdown time finished. </b> </p>',
           position: 'top',
           color: this.store.state.secondary,
           html: true,
