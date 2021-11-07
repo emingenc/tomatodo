@@ -45,15 +45,18 @@
 <script>
 import { inject } from "vue";
 import BrowserNotifications from "../mixins/BrowserNotifications";
+import { useQuasar } from 'quasar'
 export default {
   mixins: [BrowserNotifications],
   props: ["total"],
 
   data() {
     const store = inject("store");
+    const $q = useQuasar();
 
     return {
       store,
+      $q,
       timer: null,
       pauseButton: false,
       resetButton: false,
@@ -102,6 +105,17 @@ export default {
     };
   },
   methods: {
+    showNotification () {
+        this.$q.notify({
+          message: ' <p  style="width: 600px; text-align: center;"> <b> Time finished. Go to next step </b> </p>',
+          position: 'top',
+          color: this.store.state.secondary,
+          html: true,
+          actions: [
+            { label: 'Dismiss', color: 'white', handler: () => { /* ... */ } }
+          ]
+        }, 2000)
+        },
     startTimer() {
       this.timer = setInterval(() => this.countdown(), 1000);
       this.resetButton = true;
