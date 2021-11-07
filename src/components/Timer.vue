@@ -105,7 +105,13 @@ export default {
     };
   },
   methods: {
+    playSound () {
+      var data = { soundurl : 'https://soundbible.com/mp3/Air%20Plane%20Ding-SoundBible.com-496729130.mp3'} 
+      var audio = new Audio(data.soundurl);
+      audio.play();
+    },
     showNotification () {
+      this.playSound ()
         this.$q.notify({
           message: ' <p  style="width: 600px; text-align: center;"> <b> Countdown time finished. </b> </p>',
           position: 'top',
