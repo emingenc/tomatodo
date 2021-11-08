@@ -113,10 +113,9 @@ export default {
     showNotification () {
       this.playSound ()
         this.$q.notify({
-          message: ' <p  style="width: 600px; text-align: center;"> <b> Countdown time finished. </b> </p>',
+          message: ' Countdown time finished. ',
           position: 'top',
           color: this.store.state.secondary,
-          html: true,
           actions: [
             { label: 'Dismiss', color: 'white', handler: () => { /* ... */ } }
           ]

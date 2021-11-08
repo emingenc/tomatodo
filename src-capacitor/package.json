@@ -1,0 +1,12 @@
+{
+  "name": "lucky pomodoro",
+  "version": "1.0.0",
+  "description": "Pomodoro app that rewards with luck wheel after pomodoro sessions",
+  "author": "emingenc <emingenc@novit.ai>",
+  "private": true,
+  "dependencies": {
+    "@capacitor/android": "2.5.0",
+    "@capacitor/cli": "^2.0.0",
+    "@capacitor/core": "^2.0.0"
+  }
+}

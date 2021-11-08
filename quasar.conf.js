@@ -87,7 +87,15 @@ module.exports = configure(function (ctx) {
     // https://v2.quasar.dev/quasar-cli/quasar-conf-js#Property%3A-framework
     framework: {
       config: {
-        notify: { /* look at QuasarConfOptions from the API card */ }
+        notify: { /* look at QuasarConfOptions from the API card */ },
+        capacitor: {
+          // Quasar handles app exit on mobile phone back button.
+          backButtonExit: true/false/'*'/['/login', '/home', '/my-page'],
+  
+          // On the other hand, the following completely
+          // disables Quasar's back button management.
+          backButton: true/false
+        }
       },
 
       // iconSet: 'material-icons', // Quasar icon set
@@ -193,7 +201,18 @@ module.exports = configure(function (ctx) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/developing-capacitor-apps/configuring-capacitor
     capacitor: {
-      hideSplashscreen: true
+      // (Optional!)
+      hideSplashscreen: false, // disables auto-hiding the Splashscreen by Quasar CLI
+  
+      // (Optional!)
+      capacitorCliPreparationParams: [ 'sync', ctx.targetName ],
+  
+      // (Optional) If not present, will look for package.json > name
+      appName: 'lucky pomodoro', // string
+      // (Optional) If not present, will look for package.json > version
+      version: '1.0.0', // string
+      // (Optional) If not present, will look for package.json > description
+      description: 'Pomodoro app that rewards with luck wheel after pomodoro sessions', // string
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/developing-electron-apps/configuring-electron
