@@ -28,6 +28,8 @@ jobs:
 
       - name: Generate
         run: GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} quasar build
+
+      - name: Deploy
         uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
