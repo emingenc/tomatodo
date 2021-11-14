@@ -1,8 +1,8 @@
-# Tomato Wheel (pomodoro_wheel)
+# Tomatodo (pomodoro_wheel)
 
 Pomodoro task application that rewards user with luck wheel
 
-   [DEMO](https://emingenc.github.io/pomodoro_wheel)
+   [DEMO](https://emingenc.github.io/tomatodo)
 
 <a href='https://emingenc.github.io/pomodoro_wheel' target="_blank" align="center">
   <img src="./images/img1.png" width="160" >
