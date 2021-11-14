@@ -157,9 +157,9 @@ module.exports = configure(function (ctx) {
       },
 
       manifest: {
-        name: `Tomato Wheel`,
-        short_name: `Tomato Wheel`,
-        description: `Pomodoro task application that rewards user with luck wheel`,
+        name: `Tomatodo`,
+        short_name: `Tomatodo`,
+        description: `Tomatodo: Pomodoro task application that rewards user with luck wheel`,
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -208,11 +208,11 @@ module.exports = configure(function (ctx) {
       capacitorCliPreparationParams: [ 'sync', ctx.targetName ],
   
       // (Optional) If not present, will look for package.json > name
-      appName: 'lucky pomodoro', // string
+      appName: 'Tomatodo', // string
       // (Optional) If not present, will look for package.json > version
       version: '1.0.0', // string
       // (Optional) If not present, will look for package.json > description
-      description: 'Pomodoro app that rewards with luck wheel after pomodoro sessions', // string
+      description: 'Tomatodo : Pomodoro app that rewards with luck wheel after pomodoro sessions', // string
     },
 
     // Full list of options: https://v2.quasar.dev/quasar-cli/developing-electron-apps/configuring-electron
@@ -235,7 +235,7 @@ module.exports = configure(function (ctx) {
       builder: {
         // https://www.electron.build/configuration/configuration
 
-        appId: 'pomodoro_wheel'
+        appId: 'tomatodo'
       },
 
       // "chain" is a webpack-chain object https://github.com/neutrinojs/webpack-chain

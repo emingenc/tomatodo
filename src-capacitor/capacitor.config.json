@@ -1,6 +1,6 @@
 {
-  "appId": "emdiapps.pomodoro",
-  "appName": "Tomato Wheel",
+  "appId": "emdiapps.tomatodo",
+  "appName": "Tomatodo",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "www"
