@@ -1,4 +1,4 @@
-name: firebase-deploy
+name: firebase-hosting-merge
 
 on: [push, pull_request]
 
