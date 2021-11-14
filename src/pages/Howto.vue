@@ -4,7 +4,7 @@
       <q-item-label :class="'q=pa-xl text-center text-h3  text-white  bg-'+store.state.secondary" header>THE POMODORO TECHNIQUE</q-item-label>
       <q-item 
       
-      clickable v-ripple :class="'bg-white  text-'+store.state.secondary">
+      clickable v-ripple :class="'howto bg-white  text-'+store.state.secondary">
         <q-item-section >
           <q-item-label >1 - DECIDE ON THE TASK</q-item-label>
           <q-item-label caption>First thing is to decide on which task would you like to complete </q-item-label>
@@ -13,7 +13,7 @@
           <q-icon size='xl' name="check"  :color="store.state.secondary" />
         </q-item-section>
       </q-item>
-      <q-item clickable v-ripple :class="'bg-'+store.state.primary+' text-'+store.state.secondary">
+      <q-item clickable v-ripple :class="'howto bg-'+store.state.primary+' text-'+store.state.secondary">
         <q-item-section avatar top>
           <q-icon size='xl' name="timer"  :color="store.state.secondary" />
         </q-item-section>
@@ -23,7 +23,7 @@
         </q-item-section>
       </q-item>
       <q-item 
-      clickable v-ripple :class="'bg-white  text-'+store.state.secondary">
+      clickable v-ripple :class="'howto bg-white  text-'+store.state.secondary">
         <q-item-section >
           <q-item-label >3 - WORK UNTIL IT RINGS</q-item-label>
           <q-item-label caption>Keep working till 25 minutes and review what you accomplished as the timer rings </q-item-label>
@@ -42,7 +42,7 @@
         </q-item-section>
       </q-item>
       <q-item 
-      clickable v-ripple :class="'bg-white  text-'+store.state.secondary">
+      clickable v-ripple :class="'howto bg-white  text-'+store.state.secondary">
         <q-item-section >
           <q-item-label >5 - WORK. BREAK REPEAT</q-item-label>
           <q-item-label caption>After short break, repeat the process of 25 mins work, 5 mins break. After 4 times take 20-30 mins break </q-item-label>
@@ -72,7 +72,7 @@ setup(){
 </script>
 
 <style>
-.q-item {
+.howto {
 
     height:150px;
     align-items:center;
