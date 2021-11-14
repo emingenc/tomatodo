@@ -1,9 +1,9 @@
 {
-  "name": "pomodoro_wheel",
+  "name": "tomatodo",
   "version": "0.0.1",
   "description": "Pomodoro task application that rewards user with luck wheel",
-  "productName": "Tomato Wheel",
-  "author": "emingenc <emingenc@novit.ai>",
+  "productName": "Tomatodo",
+  "author": "emdiapps <emingenc@gmail.com>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",

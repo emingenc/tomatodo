@@ -1,6 +1,6 @@
 {
-  "appId": "emdiapps.pomodoro",
-  "appName": "lucky pomodoro",
+  "appId": "com.emdiapps.tomatodo",
+  "appName": "Tomatodo",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
   "webDir": "www"

@@ -1,4 +1,4 @@
-package emdiapps.pomodoro;
+package com.emdiapps.tomatodo;
 
 import android.os.Bundle;
 

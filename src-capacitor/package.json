@@ -1,8 +1,8 @@
 {
-  "name": "lucky pomodoro",
+  "name": "Tomatodo",
   "version": "1.0.0",
-  "description": "Pomodoro app that rewards with luck wheel after pomodoro sessions",
-  "author": "emingenc <emingenc@novit.ai>",
+  "description": "Tomatodo : Pomodoro app that rewards with luck wheel after pomodoro sessions",
+  "author": "emdiapps <emingenc@gmail.com>",
   "private": true,
   "dependencies": {
     "@capacitor/android": "2.5.0",

@@ -1,5 +1,5 @@
 {
-  "appId": "emdiapps.tomatodo",
+  "appId": "com.emdiapps.tomatodo",
   "appName": "Tomatodo",
   "bundledWebRuntime": false,
   "npmClient": "yarn",
