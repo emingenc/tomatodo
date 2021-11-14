@@ -1,4 +1,4 @@
-# Tomatodo (pomodoro_wheel)
+# Tomatodo
 
 Pomodoro task application that rewards user with luck wheel
 
