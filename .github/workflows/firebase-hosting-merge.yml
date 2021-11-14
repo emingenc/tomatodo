@@ -30,10 +30,10 @@ jobs:
         run: yarn global add @quasar/cli
 
       - name: Generate
-      - run: 'GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} quasar build'
+      - run: GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} quasar build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TOMATODO }}'
+          repoToken: ${{ secrets.GITHUB_TOKEN }}
+          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TOMATODO }}
           channelId: live
           projectId: tomatodo
