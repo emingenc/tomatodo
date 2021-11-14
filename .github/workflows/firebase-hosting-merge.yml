@@ -1,16 +1,16 @@
-name: firebase-hosting-merge
+name: cd
 
 on: [push, pull_request]
 
 jobs:
-  firebase-hosting-merge:
+  cd:
     runs-on: ${{ matrix.os }}
 
     strategy:
       matrix:
         os: [ubuntu-latest]
         node: [14]
-        
+
     steps:
       - name: Checkout
         uses: actions/checkout@master
@@ -27,10 +27,9 @@ jobs:
         run: yarn global add @quasar/cli
 
       - name: Generate
-      - run: GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} quasar build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: ${{ secrets.GITHUB_TOKEN }}
-          firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_TOMATODO }}
-          channelId: live
-          projectId: tomatodo
+        run: GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} quasar build
+
+      - name: Deploy
+        run: firebase deploy
+        
+    
