@@ -3,8 +3,13 @@ name: firebase-deploy
 on: [push, pull_request]
 
 jobs:
-  build_and_deploy:
-    runs-on: ubuntu-latest
+  firebase-hosting-merge:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
         
     steps:
       - name: Checkout
@@ -13,7 +18,7 @@ jobs:
       - name: Setup node env
         uses: actions/setup-node@v2
         with:
-          node-version: 14
+          node-version: ${{ matrix.node }}
 
       - name: Install dependencies
         run: yarn
