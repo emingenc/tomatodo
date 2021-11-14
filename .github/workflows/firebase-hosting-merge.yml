@@ -26,6 +26,9 @@ jobs:
       - name: Install quasar
         run: yarn global add @quasar/cli
 
+      - name: Install firebase
+        run: yarn global add firebase-tools
+
       - name: Generate
         run: GOOGLE_ANALYTICS_ID=${{ secrets.GOOGLE_ANALYTICS_ID }} quasar build
 
