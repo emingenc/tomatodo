@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<resources>
-    <string name="app_name">Tomatodo</string>
-    <string name="title_activity_main">Tomatodo</string>
-    <string name="package_name">com.emdiapps.tomatodo</string>
-    <string name="custom_url_scheme">com.emdiapps.tomatodo</string>
-    <string name="admob_app_id">ca-app-pub-1161509012137925~8557811636</string>
-</resources>
