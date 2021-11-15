@@ -5,7 +5,7 @@
           <q-avatar class="q-pl-xl q-pr-xl"  size="68px">
             <img :src="require('assets/images/logo.png')" alt="logo"  />
           </q-avatar>
-        <strong class="q-pl-xl q-pr-xl">Pomodoro Wheel</strong> 
+        <strong class="q-pl-xl q-pr-xl">Tomatodo - pomodoro app</strong> 
 
       </q-toolbar-title>
       
