@@ -1,9 +1,9 @@
-name: cd
+name: gh-page-deploy
 
 on: [push, pull_request]
 
 jobs:
-  cd:
+  gh-page-deploy:
     runs-on: ${{ matrix.os }}
 
     strategy:
