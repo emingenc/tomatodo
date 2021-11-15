@@ -1,5 +1,7 @@
 # Tomatodo
 
+<img width="628" alt="tomatodo" src="https://user-images.githubusercontent.com/81563574/141825587-2a143878-2fd7-4e04-83df-67ee64f9d22b.png">
+
 Pomodoro task application that rewards user with luck wheel
 
    [DEMO](https://emingenc.github.io/tomatodo)
