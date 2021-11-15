@@ -1,9 +1,9 @@
-name: cd
+name: firebase-deploy
 
 on: [push, pull_request]
 
 jobs:
-  cd:
+  firebase-deploy:
     runs-on: ${{ matrix.os }}
 
     strategy:
