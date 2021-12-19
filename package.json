@@ -3,13 +3,15 @@
   "version": "0.0.1",
   "description": "Pomodoro task application that rewards user with luck wheel",
   "productName": "Tomatodo",
-  "author": "emdiapps <emingenc@gmail.com>",
+  "author": "emdiapps <emdiapps@gmail.com>",
   "private": true,
   "scripts": {
     "lint": "eslint --ext .js,.vue ./",
     "test": "echo \"No test specified\" && exit 0"
   },
   "dependencies": {
+    "@admob-plus/capacitor": "^1.21.0",
+    "@capacitor/android": "^3.3.2",
     "@quasar/extras": "^1.0.0",
     "axios": "^0.21.1",
     "core-js": "^3.6.5",

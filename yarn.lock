@@ -2,6 +2,11 @@
 # yarn lockfile v1
 
 
+"@admob-plus/capacitor@^1.21.0":
+  version "1.21.0"
+  resolved "https://registry.yarnpkg.com/@admob-plus/capacitor/-/capacitor-1.21.0.tgz#3dac73f795e76ab086af15707f444b35d71aea15"
+  integrity sha512-EOGhGjJX+ysIBUmowPL8PJ4lcpGuTSAMix53KRdxXmW2wfKILG2L2qBlcwKsmwEGBC7xcH5f+RLhTPDF6SCZQQ==
+
 "@babel/code-frame@7.12.11":
   version "7.12.11"
   resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.12.11.tgz#f4ad435aa263db935b8f10f2c552d23fb716a63f"
@@ -949,6 +954,11 @@
   dependencies:
     "@babel/helper-validator-identifier" "^7.14.8"
     to-fast-properties "^2.0.0"
+
+"@capacitor/android@^3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@capacitor/android/-/android-3.3.2.tgz#f305626ea185cd2185fab802a2aedbb32bd6e5b0"
+  integrity sha512-TG+tGz0KxkT/BgvSLQfbQwQ9c4Budub5TRijIGdmMbB1ZYB76TFhwvVuwWZ52HFSlKS3sx/UYLlbULL7UQ2aug==
 
 "@electron/get@^1.3.1":
   version "1.12.4"
